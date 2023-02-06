@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Additional/Additional.iml" filepath="$PROJECT_DIR$/Additional/Additional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/W13P3/Hello World/Hello World.iml" filepath="$PROJECT_DIR$/W13P3/Hello World/Hello World.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaFX.iml" filepath="$PROJECT_DIR$/JavaFX.iml" />
       <module fileurl="file://$PROJECT_DIR$/Additional/Pacman/Pacman.iml" filepath="$PROJECT_DIR$/Additional/Pacman/Pacman.iml" />
       <module fileurl="file://$PROJECT_DIR$/Additional/Space Invaders/Space Invaders.iml" filepath="$PROJECT_DIR$/Additional/Space Invaders/Space Invaders.iml" />
@@ -12,6 +13,10 @@
       <module fileurl="file://$PROJECT_DIR$/W16P3/W16P3.iml" filepath="$PROJECT_DIR$/W16P3/W16P3.iml" />
       <module fileurl="file://$PROJECT_DIR$/W17P3/W17P3.iml" filepath="$PROJECT_DIR$/W17P3/W17P3.iml" />
       <module fileurl="file://$PROJECT_DIR$/W18P3/W18P3.iml" filepath="$PROJECT_DIR$/W18P3/W18P3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/W13P3/background/background.iml" filepath="$PROJECT_DIR$/W13P3/background/background.iml" />
+      <module fileurl="file://$PROJECT_DIR$/W13P3/dobbelen/dobbelen.iml" filepath="$PROJECT_DIR$/W13P3/dobbelen/dobbelen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/W13P3/pensioen/pensioen.iml" filepath="$PROJECT_DIR$/W13P3/pensioen/pensioen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/W13P3/scramble/scramble.iml" filepath="$PROJECT_DIR$/W13P3/scramble/scramble.iml" />
     </modules>
   </component>
 </project>
