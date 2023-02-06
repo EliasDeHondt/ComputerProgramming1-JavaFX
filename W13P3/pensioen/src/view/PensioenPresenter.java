@@ -1,8 +1,7 @@
 package view;
 
-import be.kdg.pensioen.model.Pensioen;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+
+import model.Pensioen;
 
 public class PensioenPresenter {
     private Pensioen model;

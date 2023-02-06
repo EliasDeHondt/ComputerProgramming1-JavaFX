@@ -1,9 +1,7 @@
 package view;
 
-import be.kdg.dobbelen.model.Dobbelen;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.scene.image.Image;
+
+import model.Dobbelen;
 
 public class Presenter {
     private Dobbelen model;

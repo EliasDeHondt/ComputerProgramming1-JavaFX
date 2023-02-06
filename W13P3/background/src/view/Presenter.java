@@ -1,6 +1,6 @@
 package view;
 
-import be.kdg.background.model.Kleuren;
+import model.Kleuren;
 
 public class Presenter {
     private Kleuren model;

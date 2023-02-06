@@ -1,9 +1,9 @@
-import be.kdg.dobbelen.model.Dobbelen;
-import be.kdg.dobbelen.view.DobbelenView;
-import be.kdg.dobbelen.view.Presenter;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import model.Dobbelen;
+import view.DobbelenView;
+import view.Presenter;
 
 public class MainDobbelen extends Application{
     @Override
