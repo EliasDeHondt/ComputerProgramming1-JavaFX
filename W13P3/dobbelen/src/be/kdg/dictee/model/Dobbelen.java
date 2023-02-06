@@ -1,4 +1,4 @@
-package model;
+package be.kdg.dictee.model;
 
 import java.util.Random;
 

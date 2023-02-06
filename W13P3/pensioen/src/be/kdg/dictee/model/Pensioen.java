@@ -1,4 +1,4 @@
-package model;
+package be.kdg.dictee.model;
 
 /* Hier mag je niets aan wijzigen! */
 public class Pensioen {

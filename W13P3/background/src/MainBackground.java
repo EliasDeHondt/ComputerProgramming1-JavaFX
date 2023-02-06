@@ -1,9 +1,9 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import model.Kleuren;
-import view.Presenter;
-import view.View;
+import be.kdg.dictee.model.Kleuren;
+import be.kdg.dictee.view.Presenter;
+import be.kdg.dictee.view.View;
 
 public class MainBackground extends Application {
     @Override

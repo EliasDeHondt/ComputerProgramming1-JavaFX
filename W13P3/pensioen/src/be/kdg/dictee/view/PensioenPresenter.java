@@ -1,7 +1,7 @@
-package view;
+package be.kdg.dictee.view;
 
 
-import model.Pensioen;
+import be.kdg.dictee.model.Pensioen;
 
 public class PensioenPresenter {
     private Pensioen model;

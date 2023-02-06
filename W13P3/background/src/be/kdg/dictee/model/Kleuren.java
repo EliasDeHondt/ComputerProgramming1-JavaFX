@@ -1,4 +1,4 @@
-package model;
+package be.kdg.dictee.model;
 
 /**
  * Hier hoef je niets te wijzigen!

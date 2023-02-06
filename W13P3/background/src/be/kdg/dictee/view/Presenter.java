@@ -1,13 +1,12 @@
-package view;
+package be.kdg.dictee.view;
 
-
-import model.Dobbelen;
+import be.kdg.dictee.model.Kleuren;
 
 public class Presenter {
-    private Dobbelen model;
-    private DobbelenView view;
+    private Kleuren model;
+    private View view;
 
-    public Presenter(Dobbelen model, DobbelenView view) {
+    public Presenter(Kleuren model, View view) {
         this.model = model;
         this.view = view;
         addEventHandlers();
@@ -15,10 +14,10 @@ public class Presenter {
     }
 
     private void addEventHandlers() {
-        //TODO
+        // TODO
     }
 
     private void updateView() {
-        //TODO
+        // TODO
     }
 }

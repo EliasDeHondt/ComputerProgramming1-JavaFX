@@ -1,4 +1,4 @@
-package view;
+package be.kdg.dictee.view;
 
 public class ScramblerView  {
 

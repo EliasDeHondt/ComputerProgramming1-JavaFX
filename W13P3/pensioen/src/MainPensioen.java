@@ -1,9 +1,9 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import model.Pensioen;
-import view.PensioenPresenter;
-import view.PensioenView;
+import be.kdg.dictee.model.Pensioen;
+import be.kdg.dictee.view.PensioenPresenter;
+import be.kdg.dictee.view.PensioenView;
 
 public class MainPensioen extends Application {
     @Override
