@@ -1,11 +1,8 @@
-import be.kdg.dictee.View.DicteeView;
+import be.kdg.dictee.model.Dictee;
+import be.kdg.dictee.view.DicteePresenter;
+import be.kdg.dictee.view.DicteeView;
 import javafx.application.Application;
-import javafx.geometry.Insets;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.TextArea;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 /**
@@ -17,8 +14,16 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
 
         // Maak new View (DicteeView)
-        DicteeView dicteeView = new DicteeView();
-        Scene scene = new Scene(dicteeView);
+        DicteeView view = new DicteeView();
+
+        // Maak new Model (Dictee)
+        Dictee model = new Dictee();
+
+        // Maak new Presenter (Dictee)
+        DicteePresenter presenter = new DicteePresenter(model, view);
+
+        // Maak new scene van view
+        Scene scene = new Scene(view);
 
         stage.setScene(scene);
         stage.setWidth(250);

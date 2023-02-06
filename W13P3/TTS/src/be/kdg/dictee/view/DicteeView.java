@@ -1,10 +1,7 @@
-package be.kdg.dictee.View;
+package be.kdg.dictee.view;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
@@ -26,18 +23,12 @@ public class DicteeView extends BorderPane {
         BorderPane.setAlignment(btnLeesVoor, Pos.CENTER);
         BorderPane.setMargin(btnLeesVoor, new Insets(10,10,10,10));
         // of BorderPane.setMargin(btnLeesVoor, new Insets(10));
-
-        // Event
-        btnLeesVoor.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setHeaderText("Ik heb geen zin!");
-                alert.setTitle("Dictee");
-                alert.showAndWait();
-            }
-        });
-        // of btnLeesVoor.setOnAction(new LeesVoorHandler());
     }
     // Methode
+    Button getBtnLeesVoor() { // Get..
+        return this.btnLeesVoor;
+    }
+    TextArea getTxtDictee() {
+        return this.txtDictee;
+    }
 }
