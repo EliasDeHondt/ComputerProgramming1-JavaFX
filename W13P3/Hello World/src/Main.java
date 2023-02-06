@@ -27,6 +27,9 @@ public class Main extends Application {
         Scene scene2 = new Scene(new Group());
         scene2.setFill(Color.YELLOW);
 
+        // Kan je de grootte van een Scene aanpassen?
+        // Nee dat kan niet.
+
         primaryStage.setScene(scene1);
 
         // Maak de stage 500x600 pixels groot.
