@@ -21,7 +21,7 @@ public class DicteePresenter {
         this.updateView();
     }
     // Methods
-    private void addEventHandlers() { // Event
+    private void addEventHandlers() {
         dicteeView.getBtnLeesVoor().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -32,10 +32,9 @@ public class DicteePresenter {
         });
     }
     private void updateView() {
-        // Geen update nodeg
+        // Geen update.
 
     }
-
 }
 // Alert alert = new Alert(Alert.AlertType.INFORMATION);
 // alert.setHeaderText("Ik heb geen zin!");

@@ -28,7 +28,7 @@ public class DicteeView extends BorderPane {
     Button getBtnLeesVoor() { // Get..
         return this.btnLeesVoor;
     }
-    TextArea getTxtDictee() {
+    TextArea getTxtDictee() { // Get..
         return this.txtDictee;
     }
 }
