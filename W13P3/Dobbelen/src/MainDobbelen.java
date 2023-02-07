@@ -27,8 +27,8 @@ public class MainDobbelen extends Application{
         primaryStage.setTitle("Dobbelen");
 
         // x
-        primaryStage.setHeight(500);
-        primaryStage.setWidth(500);
+        primaryStage.setHeight(250);
+        primaryStage.setWidth(300);
 
         // 2.3  Toon de primaryStage.
         primaryStage.show();

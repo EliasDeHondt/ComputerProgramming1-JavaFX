@@ -17,15 +17,15 @@ public class Dobbelen {
     }
 
     public void werp(){
-        aantalOgen1 = random.nextInt(MAX_AANTAL_OGEN) + 1;
-        aantalOgen2 = random.nextInt(MAX_AANTAL_OGEN) + 1;
+        this.aantalOgen1 = this.random.nextInt(MAX_AANTAL_OGEN) + 1;
+        this.aantalOgen2 = this.random.nextInt(MAX_AANTAL_OGEN) + 1;
     }
 
     public int getAantalOgen1() {
-        return aantalOgen1;
+        return this.aantalOgen1;
     }
 
     public int getAantalOgen2() {
-        return aantalOgen2;
+        return this.aantalOgen2;
     }
 }

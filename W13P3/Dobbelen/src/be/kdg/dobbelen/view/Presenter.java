@@ -28,27 +28,30 @@ public class Presenter {
             @Override
             public void handle(ActionEvent actionEvent) {
                 // 4.1.2 Zorg er voor dat de eventhandler de methode updateView (zie punt 4.2) oproept.
+                model.werp();
                 updateView();
             }
         });
     }
     private void updateView() {
-        Random random = new Random();
-        switch (random.nextInt(1, 6)) {
-            case 1 -> this.view.setImgDobel1(new ImageView(new Image("be\\kdg\\dobbelen\\view\\images\\die1.png")));
-            case 2 -> this.view.setImgDobel1(new ImageView(new Image("be\\kdg\\dobbelen\\view\\images\\die2.png")));
-            case 3 -> this.view.setImgDobel1(new ImageView(new Image("be\\kdg\\dobbelen\\view\\images\\die3.png")));
-            case 4 -> this.view.setImgDobel1(new ImageView(new Image("be\\kdg\\dobbelen\\view\\images\\die4.png")));
-            case 5 -> this.view.setImgDobel1(new ImageView(new Image("be\\kdg\\dobbelen\\view\\images\\die5.png")));
-            case 6 -> this.view.setImgDobel1(new ImageView(new Image("be\\kdg\\dobbelen\\view\\images\\die6.png")));
+        switch (model.getAantalOgen1()) {
+            // 4.2.1 Je haalt het aantal ogen op voor beide teerlingen. Gebruik de juiste methode van de klasse Dobbelen.
+            // 4.2.2 Je toont de overeenkomstige images in de imageviews in de DobbelenView klasse. Je moet er voor zorgen dat de imageviews,
+            // net zoals de knop, bereikbaar zijn via getters die je aan DobbelenView toevoegt.
+            case 1 -> this.view.setImgDobel1("be\\kdg\\dobbelen\\view\\images\\die1.png");
+            case 2 -> this.view.setImgDobel1("be\\kdg\\dobbelen\\view\\images\\die2.png");
+            case 3 -> this.view.setImgDobel1("be\\kdg\\dobbelen\\view\\images\\die3.png");
+            case 4 -> this.view.setImgDobel1("be\\kdg\\dobbelen\\view\\images\\die4.png");
+            case 5 -> this.view.setImgDobel1("be\\kdg\\dobbelen\\view\\images\\die5.png");
+            case 6 -> this.view.setImgDobel1("be\\kdg\\dobbelen\\view\\images\\die6.png");
         }
-        switch (random.nextInt(1, 6)) {
-            case 1 -> this.view.setImgDobel2(new ImageView(new Image("be\\kdg\\dobbelen\\view\\images\\die1.png")));
-            case 2 -> this.view.setImgDobel2(new ImageView(new Image("be\\kdg\\dobbelen\\view\\images\\die2.png")));
-            case 3 -> this.view.setImgDobel2(new ImageView(new Image("be\\kdg\\dobbelen\\view\\images\\die3.png")));
-            case 4 -> this.view.setImgDobel2(new ImageView(new Image("be\\kdg\\dobbelen\\view\\images\\die4.png")));
-            case 5 -> this.view.setImgDobel2(new ImageView(new Image("be\\kdg\\dobbelen\\view\\images\\die5.png")));
-            case 6 -> this.view.setImgDobel2(new ImageView(new Image("be\\kdg\\dobbelen\\view\\images\\die6.png")));
+        switch (model.getAantalOgen2()) {
+            case 1 -> this.view.setImgDobel2("be\\kdg\\dobbelen\\view\\images\\die1.png");
+            case 2 -> this.view.setImgDobel2("be\\kdg\\dobbelen\\view\\images\\die2.png");
+            case 3 -> this.view.setImgDobel2("be\\kdg\\dobbelen\\view\\images\\die3.png");
+            case 4 -> this.view.setImgDobel2("be\\kdg\\dobbelen\\view\\images\\die4.png");
+            case 5 -> this.view.setImgDobel2("be\\kdg\\dobbelen\\view\\images\\die5.png");
+            case 6 -> this.view.setImgDobel2("be\\kdg\\dobbelen\\view\\images\\die6.png");
         }
     }
 }

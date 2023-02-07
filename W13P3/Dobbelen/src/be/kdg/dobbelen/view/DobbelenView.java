@@ -26,8 +26,7 @@ public class DobbelenView extends BorderPane {
         this.imgDobel2 = new ImageView();
         this.butWerp = new Button("Werp");
         // 3.1.2 De knop moet een geprefereerde breedte van 80 pixels hebben.
-        this.butWerp.setMaxWidth(80);
-        this.butWerp.setMinWidth(80);
+        this.butWerp.prefWidth(80);
     }
     private void layoutNodes() {
         // 3.2.1 Maak gebruik van de add methode van de klasse GridPane om de twee images en de knop op de juiste plaats te krijgen. De knop overspant twee kolommen.
@@ -38,15 +37,23 @@ public class DobbelenView extends BorderPane {
 
         // 3.2.2 Zorg voor een horizontale en verticale “gap” van 10 pixels tussen de cellen van de GridPane. Zorg ook voor een “padding” van 10 pixels.
         grid1.setHgap(10);
+        grid1.setVgap(10);
         grid1.setPadding(new Insets(10));
+        this.setLeft(this.imgDobel1);
+        this.setCenter(this.butWerp);
+        this.setRight(this.imgDobel2);
+        BorderPane.setAlignment(this.imgDobel1, Pos.CENTER_LEFT);
+        BorderPane.setAlignment(this.butWerp, Pos.BOTTOM_CENTER);
+        BorderPane.setAlignment(this.imgDobel2, Pos.CENTER_RIGHT);
     }
     Button getButWerp() { // Get..
         return this.butWerp;
     }
-    public void setImgDobel1(ImageView imgDobel1) { // Set..
-        this.imgDobel1 = imgDobel1;
+    public void setImgDobel1(String path) { // Set..
+        this.imgDobel1.setImage(new Image(path));
+
     }
-    public void setImgDobel2(ImageView imgDobel2) { // Set..
-        this.imgDobel2 = imgDobel2;
+    public void setImgDobel2(String path) { // Set..
+        this.imgDobel2.setImage(new Image(path));
     }
 }
