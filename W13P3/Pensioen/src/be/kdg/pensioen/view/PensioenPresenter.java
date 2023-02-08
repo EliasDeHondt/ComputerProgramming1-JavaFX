@@ -4,6 +4,7 @@ package be.kdg.pensioen.view;
 import be.kdg.pensioen.model.Pensioen;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.scene.control.Alert;
 
 public class PensioenPresenter {
     // Attributes
@@ -22,10 +23,16 @@ public class PensioenPresenter {
         this.view.getBerekenButton().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                // Zorg er voor dat de eventhandler de methode updateView (zie punt 4.2) oproept.
-                model.setGeboorteJaar(Integer.parseInt(view.getGeboorteJaarField().getText()));
-                updateView();
-                System.out.println(model.getPensioenJaar());
+                try {
+                    // Zorg er voor dat de eventhandler de methode updateView (zie punt 4.2) oproept.
+                    model.setGeboorteJaar(Integer.parseInt(view.getGeboorteJaarField().getText()));
+                    updateView();
+                } catch (Exception e) {
+                     Alert alert = new Alert(Alert.AlertType.ERROR);
+                     alert.setHeaderText("Ik heb geen zin! :)");
+                     alert.setTitle("ERROR");
+                     alert.showAndWait();
+                }
             }
         });
     }

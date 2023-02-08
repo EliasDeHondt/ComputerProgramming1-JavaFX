@@ -1,5 +1,6 @@
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import be.kdg.dobbelen.model.Dobbelen;
 import be.kdg.dobbelen.view.DobbelenView;
@@ -27,8 +28,11 @@ public class MainDobbelen extends Application{
         primaryStage.setTitle("Dobbelen");
 
         // x
-        primaryStage.setHeight(250);
-        primaryStage.setWidth(300);
+        primaryStage.setHeight(200);
+        primaryStage.setWidth(250);
+
+        // x
+        primaryStage.getIcons().add(new Image("be\\kdg\\dobbelen\\view\\images\\die6.png"));
 
         // 2.3  Toon de primaryStage.
         primaryStage.show();

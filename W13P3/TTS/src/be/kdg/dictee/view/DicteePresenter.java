@@ -36,7 +36,3 @@ public class DicteePresenter {
 
     }
 }
-// Alert alert = new Alert(Alert.AlertType.INFORMATION);
-// alert.setHeaderText("Ik heb geen zin!");
-// alert.setTitle("Dictee");
-// alert.showAndWait();

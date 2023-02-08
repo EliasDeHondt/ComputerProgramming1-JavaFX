@@ -22,9 +22,6 @@ public class Dictee {
     public void setTekst(String tekst) {
         this.tekst = tekst;
     }
-    public String getTekst() {
-        return this.tekst;
-    }
     public void leesVoor() {
         Voice voice = VoiceManager.getInstance().getVoice(voiceName);
         voice.allocate();

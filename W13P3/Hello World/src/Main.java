@@ -25,7 +25,6 @@ public class Main extends Application {
 
         // Maak een tweede Scene aan met als rootnode:
         Scene scene2 = new Scene(new Group());
-        scene2.setFill(Color.YELLOW);
 
         // Kan je de grootte van een Scene aanpassen?
         // Nee dat kan niet.
