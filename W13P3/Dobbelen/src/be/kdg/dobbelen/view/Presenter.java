@@ -24,7 +24,7 @@ public class Presenter {
     private void addEventHandlers() {
         // 4.1.1 Hang een eventhandler aan de knop. Om dit te kunnen doen moet je ervoor zorgen dat de button bereikbaar is via een getter die je aan de klasse
         // DobbelenView toevoegt (package-private).
-        view.getButWerp().setOnAction(new EventHandler<ActionEvent>() {
+        this.view.getButWerp().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 // 4.1.2 Zorg er voor dat de eventhandler de methode updateView (zie punt 4.2) oproept.
@@ -34,10 +34,10 @@ public class Presenter {
         });
     }
     private void updateView() {
+        // 4.2.1 Je haalt het aantal ogen op voor beide teerlingen. Gebruik de juiste methode van de klasse Dobbelen.
+        // 4.2.2 Je toont de overeenkomstige images in de imageviews in de DobbelenView klasse. Je moet er voor zorgen dat de imageviews,
+        // net zoals de knop, bereikbaar zijn via getters die je aan DobbelenView toevoegt.
         switch (model.getAantalOgen1()) {
-            // 4.2.1 Je haalt het aantal ogen op voor beide teerlingen. Gebruik de juiste methode van de klasse Dobbelen.
-            // 4.2.2 Je toont de overeenkomstige images in de imageviews in de DobbelenView klasse. Je moet er voor zorgen dat de imageviews,
-            // net zoals de knop, bereikbaar zijn via getters die je aan DobbelenView toevoegt.
             case 1 -> this.view.setImgDobel1("be\\kdg\\dobbelen\\view\\images\\die1.png");
             case 2 -> this.view.setImgDobel1("be\\kdg\\dobbelen\\view\\images\\die2.png");
             case 3 -> this.view.setImgDobel1("be\\kdg\\dobbelen\\view\\images\\die3.png");

@@ -4,16 +4,16 @@ import java.util.*;
 
 //HET MODEL IS GEGEVEN EN MAG NIET AANGEPAST WORDEN
 public class Scrambler {
+    // Attributes
     private String tekst = "test";
-
+    // Constructors
+    // Methods
     public void setTekst(String tekst) {
         this.tekst = tekst;
     }
-
     public String getTekst() {
-        return tekst;
+        return this.tekst;
     }
-
     public void scramble(){
         List<String> letters = Arrays.asList(tekst.split(""));
         Collections.shuffle(letters);
@@ -22,5 +22,4 @@ public class Scrambler {
             tekst += letter;
         }
     }
-
 }

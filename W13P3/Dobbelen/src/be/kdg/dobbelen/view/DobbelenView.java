@@ -27,6 +27,8 @@ public class DobbelenView extends GridPane {
         this.butWerp.prefWidth(80);
     }
     private void layoutNodes() {
+        // x
+        this.setStyle("-fx-background-color: #000000");
         // 3.2.1 Maak gebruik van de add methode van de klasse GridPane om de twee images en de knop op de juiste plaats te krijgen.
         // De knop overspant twee kolommen.
         this.add(this.butWerp,1,2);
