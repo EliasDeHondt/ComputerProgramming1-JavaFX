@@ -15,7 +15,7 @@ public class TimeView extends BorderPane {
     private static final double CANVAS_WIDTH = 800.0;
     private static final double CANVAS_HEIGHT = 600.0;
 
-    private static final Image SUN_IMAGE = new Image("/sun.png");
+    private static final Image SUN_IMAGE = new Image("be/kdg/tijd/resources/sun.png");
     private static final double MIN_Y_SUN = 100.0; // Min. Y of the Sun is actually the highest point in the sky because screen coordinates are reversed.
     private static final double MAX_Y_SUN = CANVAS_HEIGHT; // Max. Y of the Sun is actually the lowest point in the sky because screen coordinates are reversed.
     private static final double MIN_X_SUN = 0.0;

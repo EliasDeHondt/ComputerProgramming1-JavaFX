@@ -1,0 +1,21 @@
+.mainMenuButton {
+    -fx-background-color:   linear-gradient(#f2f2f2, #d6d6d6), /* outer-most border, the edge */
+                            linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%), /* just inside the outer-most border, a second inner edge */
+                            linear-gradient(#dddddd 0%, #f6f6f6 50%); /* the large button area */
+    -fx-background-radius: 8, 7, 6;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: #717171;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.6), 5, 0.0, 0, 1);
+    -fx-font: 32px Tahoma;
+}
+
+.mainMenuButton:pressed {
+    -fx-background-color:   linear-gradient(#e2e2e2, #cbcbcb),
+                            linear-gradient(#e6e6e6 0%, #cecece 20%, #cbcbcb 100%),
+                            linear-gradient(#dddddd 0%, #efefef 50%);
+}
+
+.mainMenuButton:hover {
+    -fx-text-fill: #000000;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 1.0), 5, 0.0, 0, 1);
+}
