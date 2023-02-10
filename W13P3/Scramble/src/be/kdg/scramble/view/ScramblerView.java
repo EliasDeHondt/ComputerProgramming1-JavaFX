@@ -25,7 +25,7 @@ public class ScramblerView extends GridPane { // 3. Deze klasse erft van GridPan
     }
     public void layoutNodes() {
         // 3.2.1 Maak gebruik van de add methode van de klasse GridPane om de controls op de juiste plaats te krijgen.
-        this.setGridLinesVisible(true);
+        // this.setGridLinesVisible(true);
         // (0,0) (1,0) (2,0)
         // (0,1) (1,1) (2,1)
         // (0,2) (1,2) (2,2)

@@ -1,7 +1,6 @@
 package be.kdg.stadhuis.view;
 
 import javafx.geometry.Insets;
-import javafx.scene.canvas.Canvas;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.effect.ColorAdjust;
