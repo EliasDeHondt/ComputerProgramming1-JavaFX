@@ -15,4 +15,7 @@ public class MainStadhuis extends Application {
         primaryStage.setScene(new Scene(view));
         primaryStage.show();
     }
+    public static void main(String[] args) {
+        Application.launch();
+    }
 }
