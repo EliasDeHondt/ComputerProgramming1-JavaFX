@@ -18,4 +18,7 @@ public class MainRaster extends Application {
         primaryStage.setResizable(false);
         primaryStage.show();
     }
+    public static void main(String[] args) {
+        Application.launch();
+    }
 }
