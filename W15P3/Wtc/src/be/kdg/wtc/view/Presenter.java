@@ -22,6 +22,6 @@ public class Presenter {
     }
 
     private void updateView() {
-        this.view.updateCanvas(this.view.getSlider().getValue());
+        this.view.updateCanvas();
     }
 }

@@ -3,13 +3,15 @@ package be.kdg.wtc.view;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 
 public class WTCView extends VBox {
-    private static final Image BEFORE = new Image("/images/before.jpg");
-    private static final Image AFTER = new Image("/images/after.jpg");
+    private static final Image BEFORE = new Image("/be/kdg/wtc/resources/images/before.jpg");
+    private static final Image AFTER = new Image("/be/kdg/wtc/resources/images/after.jpg");
 
     private static final double IMAGE_WIDTH = 900.0;
     private static final double IMAGE_HEIGHT = 595.0;
@@ -23,8 +25,8 @@ public class WTCView extends VBox {
     }
 
     private void initialiseNodes() {
-        this.canvas = new Canvas();
-        this.slider = new Slider(0.0, 100.0, 50.0);
+        this.canvas = new Canvas(400,300);
+        this.slider = new Slider(0, 1, 0.5);
     }
 
     private void layoutNodes() {
@@ -44,10 +46,15 @@ public class WTCView extends VBox {
         return this.slider;
     }
 
-    /**
-     * @param percentage A value from 0 to 100. The percentage of the "before" picture that should be displayed.
-     */
-    void updateCanvas(double percentage) {
-
+    void updateCanvas() {
+        GraphicsContext gc = this.canvas.getGraphicsContext2D();
+        this.slider.valueProperty().addListener((observable, oldValue, newValue) -> {
+            gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
+            double opacity = newValue.doubleValue();
+            gc.setGlobalAlpha(1 - opacity);
+            gc.drawImage(BEFORE, 0, 0);
+            gc.setGlobalAlpha(opacity);
+            gc.drawImage(AFTER, 0, 0);
+        });
     }
 }
