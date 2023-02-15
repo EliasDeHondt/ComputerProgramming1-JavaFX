@@ -18,6 +18,7 @@ public class GameView extends BorderPane {
     private MenuItem miSettings;
     private MenuItem miAbout;
     private MenuItem miRules;
+    private Circle[][] circles;
 
     public GameView() {
         initialiseNodes();
@@ -32,14 +33,45 @@ public class GameView extends BorderPane {
         miSettings = new MenuItem("Settings");
         miHighScore = new MenuItem("Highscore");
         miRestart = new MenuItem("Restart");
+        circles = new Circle[RIJEN][KOLOMMEN]; //6x7 circles
     }
 
     private void layoutNodes() {
-        //TODO menu opbouwen:
+        // menu opbouwen:
+        Menu meGame = new Menu("Game",null, miSettings, miHighScore, new SeparatorMenuItem(), miRestart,miExit);
+        Menu meHelp = new Menu("Help",null,miRules,miAbout);
 
-        //TODO Gridpane opbouwen en in BorderPane zetten:
+        MenuBar menuBar = new MenuBar(meGame,meHelp);
+        this.setTop(menuBar);
+        // Gridpane opbouwen en in BorderPane zetten:
+        GridPane gridPane = new GridPane();
+        menuBar.setStyle("-fx-background-color: #9a9ad7"); //css
+        gridPane.setStyle("-fx-background-color: darkblue"); //css
 
+        for (int i = 0; i < RIJEN; i++) {
+            for (int j = 0; j < KOLOMMEN; j++) {
+                circles[i][j] = new Circle(25);
+                circles[i][j].setFill(Color.DARKGRAY);
+
+                gridPane.add(circles[i][j],j,i); //kolom,rij
+                GridPane.setHgrow(circles[i][j],Priority.ALWAYS);
+                GridPane.setVgrow(circles[i][j],Priority.ALWAYS);
+            }
+        }
+        gridPane.setPadding(new Insets(10));
+        gridPane.setHgap(10);
+        gridPane.setVgap(10);
+
+        setCenter(gridPane);
     }
 
-   //TODO getters
+   // getters
+
+    Circle[][] getCircles() {
+        return circles;
+    }
+
+    MenuItem getMiExit() {
+        return miExit;
+    }
 }

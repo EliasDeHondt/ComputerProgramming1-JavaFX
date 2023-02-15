@@ -1,5 +1,6 @@
 package be.kdg;
 
+
 import be.kdg.model.VierOpRij;
 import be.kdg.view.game.GamePresenter;
 import be.kdg.view.game.GameView;
@@ -17,8 +18,8 @@ public class Main extends Application {
         Scene scene = new Scene(view);
         primaryStage.setScene(scene);
         primaryStage.setTitle("4 op een rij");
-        primaryStage.setMinHeight(400);
-        primaryStage.setMinWidth(400);
+        primaryStage.setMinHeight(420);
+        primaryStage.setMinWidth(440);
         primaryStage.show();
     }
 
