@@ -23,10 +23,10 @@ public class View extends BorderPane {
     public void layoutNodes() {
         this.setCenter(this.changeButton);
         // 3.2.1 Maak gebruik van de juiste set… methode van de klasse BorderPane om de component op de juiste plaats te krijgen.
-        BorderPane.setAlignment(this.changeButton, Pos.BOTTOM_RIGHT);
+        setAlignment(this.changeButton, Pos.BOTTOM_RIGHT);
 
         // 3.2.2 Zorg voor een "padding" van 10 pixels.
-        this.setPadding(new Insets(10));
+        setPadding(new Insets(10));
     }
     Button getChangeButton() { // Get..
         return this.changeButton;
