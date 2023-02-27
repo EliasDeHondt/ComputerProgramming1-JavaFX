@@ -28,18 +28,60 @@ public class MainPresenter {
     public MainPresenter(PaintModel model, MainView view) {
         this.model = model;
         this.view = view;
-        addEventhandlers();
-        updateView();
+        this.addEventhandlers();
+        this.updateView();
     }
 
     private void addEventhandlers() {
-        //TODO MouseEvents afhandelen
-        //TODO ButtonEvents afhandelen
-        //TODO MenuEvents afhandelen
+        // MouseEvents afhandelen
+        this.view.getCanvas().setOnMouseDragged(event -> {
+            this.model.addPoint(new Point(
+                    (int)event.getX(),
+                    (int)event.getY(),
+                    (int)this.view.getSlPensize().getValue(),
+                    this.view.getColorPicker().getValue()));
+            updateView();
+        });
+
+        this.view.getCanvas().setOnMouseMoved(event -> {
+            this.view.getLblStatus().setText(String.format("x: %.0f y: %.0f",
+                    event.getX(), event.getY()));
+        });
+
+        // ButtonEvents afhandelen
+        this.view.getBtnUndo().setOnAction(actionEvent -> {
+            this.model.undo();
+            this.updateView();
+        });
+
+        this.view.getBtnClear().setOnAction(actionEvent -> {
+            this.model.clear();
+            this.updateView();
+        });
+
+        // MenuEvents afhandelen
+        this.view.getMiSave().setOnAction(actionEvent -> {
+            this.model.save();
+        });
+
+        this.view.getMiLoad().setOnAction(actionEvent -> {
+            this.model.load();
+            this.updateView();
+        });
         //TODO WindowClose event afhandelen
+
     }
 
     private void updateView() {
-        //TODO Points ophalen van model en tekenen op canvas
+        GraphicsContext gc = this.view.getCanvas().getGraphicsContext2D();
+        gc.setFill(Color.WHITE);
+        gc.fillRect(0,0, this.view.getCanvas().getWidth(),this.view.getCanvas().getHeight());
+        // Points ophalen van model en tekenen op canvas
+        for(Point point : this.model.getPoints()) {
+            // Kleur
+            gc.setFill(point.getColor());
+            // Cirkeltje tekenen
+            gc.fillOval(point.getX(),point.getY(),point.getPensize(),point.getPensize());
+        }
     }
 }

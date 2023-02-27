@@ -16,13 +16,13 @@ public class AboutView extends BorderPane {
     private Button btnOK;
 
     public AboutView() {
-        initialiseNodes();
-        layoutNodes();
+        this.initialiseNodes();
+        this.layoutNodes();
     }
 
     private void initialiseNodes() {
-        btnOK = new Button("Ok");
-        btnOK.setPrefWidth(60);
+        this.btnOK = new Button("Ok");
+        this.btnOK.setPrefWidth(60);
     }
 
     private void layoutNodes() {
@@ -40,6 +40,6 @@ public class AboutView extends BorderPane {
     }
 
     Button getBtnOK() {
-        return btnOK;
+        return this.btnOK;
     }
 }

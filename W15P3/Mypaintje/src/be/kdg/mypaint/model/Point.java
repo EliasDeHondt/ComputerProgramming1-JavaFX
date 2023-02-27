@@ -16,18 +16,18 @@ public class Point {
     }
 
     public int getX() {
-        return x;
+        return this.x;
     }
 
     public int getY() {
-        return y;
+        return this.y;
     }
 
     public int getPensize() {
-        return pensize;
+        return this.pensize;
     }
 
     public Color getColor() {
-        return color;
+        return this.color;
     }
 }

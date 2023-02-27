@@ -17,6 +17,7 @@ public class Presenter {
             @Override
             public void handle(MouseEvent event) {
                 updateView();
+
             }
         });
     }
