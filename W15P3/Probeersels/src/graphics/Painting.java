@@ -2,6 +2,8 @@ package graphics;
 
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Label;
+import javafx.scene.effect.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.*;
@@ -50,11 +52,16 @@ public class Painting extends BorderPane {
         // ...
         gc.setFill(Color.web("#CD5C5C"));
         gc.fillRect(200,350,100,100); // x1, y1, x2, y2
-
-
-
-
-
+        // ...
+        gc.setFill(new ImagePattern(new Image("newyork.jpg")));
+        double[] xpoints = {0, (getWidth()/2), 0};
+        double[] ypoints = {0, (getHeight()/2), 500};
+        gc.fillPolygon(xpoints, ypoints, xpoints.length);
+        // ...
+        gc.setFill(Color.BLACK);
+        gc.setFont(new Font("Arial",30));
+        gc.setEffect(new BoxBlur());
+        gc.fillText("Hallo JavaFX",150,30);
     }
 
 }
