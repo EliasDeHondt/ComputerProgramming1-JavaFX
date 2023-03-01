@@ -76,8 +76,5 @@ public class PaintModel {
             alert.showAndWait();
             throw new RuntimeException(e);
         }
-
     }
-
-
 }
