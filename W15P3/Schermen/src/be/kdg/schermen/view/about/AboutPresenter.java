@@ -17,12 +17,7 @@ public class AboutPresenter {
     }
 
     private void addEventHandlers() {
-        view.getBtnOK().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                view.getScene().getWindow().hide();
-            }
-        });
+        view.getBtnOK().setOnAction(event -> view.getScene().getWindow().hide());
     }
 
     private void updateView() {

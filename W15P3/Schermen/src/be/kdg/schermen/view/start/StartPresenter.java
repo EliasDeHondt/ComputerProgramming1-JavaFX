@@ -33,21 +33,18 @@ public class StartPresenter {
     }
 
     public void voegWindowEventToe() {
-        view.getScene().getWindow().setOnCloseRequest(new EventHandler<WindowEvent>() {
-            @Override
-            public void handle(WindowEvent event) {
-                Alert alert = new Alert(Alert.AlertType.WARNING);
-                alert.setHeaderText("Hierdoor stopt het spel!");
-                alert.setContentText("Ben je zeker?");
-                alert.setTitle("Opgelet!");
-                alert.getButtonTypes().clear();
-                ButtonType neen = new ButtonType("Neen");
-                ButtonType ja = new ButtonType("Ja");
-                alert.getButtonTypes().addAll(neen, ja);
-                alert.showAndWait();
-                if (alert.getResult() == null || alert.getResult().equals(neen)) {
-                    event.consume();
-                }
+        view.getScene().getWindow().setOnCloseRequest(event -> {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText("Hierdoor stopt het spel!");
+            alert.setContentText("Ben je zeker?");
+            alert.setTitle("Opgelet!");
+            alert.getButtonTypes().clear();
+            ButtonType neen = new ButtonType("Neen");
+            ButtonType ja = new ButtonType("Ja");
+            alert.getButtonTypes().addAll(neen, ja);
+            alert.showAndWait();
+            if (alert.getResult().equals(neen)) {
+                event.consume();
             }
         });
     }

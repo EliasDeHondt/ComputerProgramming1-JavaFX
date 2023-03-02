@@ -21,19 +21,16 @@ public class GamePresenter {
     }
 
     private void addEventHandlers() {
-        view.getMiAbout().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                AboutView aboutView = new AboutView();
-                AboutPresenter aboutPresenter = new AboutPresenter(model, aboutView);
-                Stage aboutStage = new Stage();
-                aboutStage.initOwner(view.getScene().getWindow());
-                aboutStage.initModality(Modality.APPLICATION_MODAL); // Gebonden venster!
-                aboutStage.setScene(new Scene(aboutView)); //Tonen in een NIEUWE scene
-                aboutStage.setX(view.getScene().getWindow().getX() + 100);
-                aboutStage.setY(view.getScene().getWindow().getY() + 150);
-                aboutStage.showAndWait();
-            }
+        view.getMiAbout().setOnAction(event -> {
+            AboutView aboutView = new AboutView();
+            AboutPresenter aboutPresenter = new AboutPresenter(model, aboutView);
+            Stage aboutStage = new Stage();
+            aboutStage.initOwner(view.getScene().getWindow());
+            aboutStage.initModality(Modality.APPLICATION_MODAL); // Gebonden venster!
+            aboutStage.setScene(new Scene(aboutView)); //Tonen in een NIEUWE scene
+            aboutStage.setX(view.getScene().getWindow().getX() + 100);
+            aboutStage.setY(view.getScene().getWindow().getY() + 150);
+            aboutStage.showAndWait();
         });
     }
 
