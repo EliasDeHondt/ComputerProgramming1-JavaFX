@@ -8,6 +8,8 @@ import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
 import javafx.scene.paint.Color;
 
+import java.awt.font.TextHitInfo;
+
 /**
  * Presenter die de verbinding verzorgt tussen Viewklassen en modelklasse Woordle
  */
@@ -25,9 +27,16 @@ public class WoordlePresenter {
         view.getBtnBevestig().setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                //TODO: Laat het model de userinput evalueren.
-                //TODO: catch een eventuele WoordleException
-
+                try {
+                    updateView(model.evalueer(view.getTxtInput().getText()));
+                } catch (WoordleException e) {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setHeaderText(e.getMessage());
+                    alert.setTitle("Woordle Exception");
+                    alert.showAndWait();
+                    view.getTxtInput().clear();
+                    view.getTxtInput().requestFocus();
+                }
             }
         });
     }
@@ -39,15 +48,9 @@ public class WoordlePresenter {
             WoordleTextField tf = view.getWoordleRows()[beurt - 1].getTxtFields()[i];
             tf.setText(poging.charAt(i));
             switch (evaluaties[i]) {
-                case JUIST:
-                    tf.setBackground(Color.LIMEGREEN);
-                    break;
-                case FOUTE_PLEK:
-                    tf.setBackground(Color.GOLD);
-                    break;
-                case FOUT:
-                    tf.setBackground(Color.GREY);
-                    break;
+                case JUIST -> tf.setBackground(Color.LIMEGREEN);
+                case FOUTE_PLEK -> tf.setBackground(Color.GOLD);
+                case FOUT -> tf.setBackground(Color.GREY);
             }
         }
         if (!model.isSpelGedaan()) {

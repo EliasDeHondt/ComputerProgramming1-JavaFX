@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class DemoBerghutten {
     public static void main(String[] args) {
         try {
-            List<Berghut> berghuttenList = FileHandler.txtFile2List("data/berghutten.txt");
+            List<Berghut> berghuttenList = FileHandler.txtFile2List("W16P3/Berghutten/data/berghutten.txt");
             System.out.println("Ingelezen data:");
             for (Berghut berghut : berghuttenList) {
                 System.out.println(berghut);

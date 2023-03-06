@@ -11,8 +11,8 @@ public class Woordle {
     private boolean woordGevonden;
 
     public Woordle() {
-        woordleFileManager = new WoordleFileManager();
-        zoekWoord = woordleFileManager.getRandomWoord();
+        this.woordleFileManager = new WoordleFileManager();
+        this.zoekWoord = this.woordleFileManager.getRandomWoord();
     }
 
     public Evaluatie[] evalueer(String invoer) {

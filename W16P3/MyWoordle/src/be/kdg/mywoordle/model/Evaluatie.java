@@ -11,10 +11,10 @@ public enum Evaluatie {
 
     @Override
     public String toString() {
-        switch (this.ordinal()) {
-            case 0: return "J";
-            case 1: return "P";
-            default:return "F";
-        }
+        return switch (this.ordinal()) {
+            case 0 -> "J";
+            case 1 -> "P";
+            default -> "F";
+        };
     }
 }

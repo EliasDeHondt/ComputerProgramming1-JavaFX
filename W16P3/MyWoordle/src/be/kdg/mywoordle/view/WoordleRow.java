@@ -10,15 +10,15 @@ public class WoordleRow extends GridPane {
     private WoordleTextField[] txtFields;
 
     public WoordleRow() {
-        txtFields = new WoordleTextField[Woord.WOORD_LENGTE];
+        this.txtFields = new WoordleTextField[Woord.WOORD_LENGTE];
         for (int i = 0; i < Woord.WOORD_LENGTE; i++) {
-            txtFields[i] = new WoordleTextField();
-            super.add(txtFields[i], i, 0);
+            this.txtFields[i] = new WoordleTextField();
+            super.add(this.txtFields[i], i, 0);
         }
         setHgap(6);
     }
 
     WoordleTextField[] getTxtFields() {
-        return txtFields;
+        return this.txtFields;
     }
 }

@@ -5,24 +5,33 @@ package be.kdg.mywoordle.model;
  */
 public class Woord implements Comparable<Woord>{
     public final static int WOORD_LENGTE = 5;
-    private String woord;
+    private final String woord;
 
     public Woord(String invoer) {
-        //TODO: controleer de invoer die binnenkomt: mag niet null zijn, moet 5 letters lang zijn, mag geen cijfers bevatten
-        //TODO: gooi een WoordleException indien niet goed.
-        //TODO: Zet ook om naar hoofdletters
-
+        if (!controleerWoord(invoer)) {
+            throw new WoordleException("Het woord moet 5 karkters zijn");
+        }
+        this.woord =  invoer.toUpperCase();
+    }
+    public static boolean controleerWoord(String invoer) {
+        if (invoer == null) return false;
+        invoer = invoer.toUpperCase();
+        if (invoer.length() != WOORD_LENGTE) return false;
+        for(int i  = 0; i < invoer.length(); i++) {
+            if (invoer.charAt(i) < 'A' || invoer.charAt(i) >'Z') return false;
+        }
+        return true;
     }
 
     public String getWoord() {
-        return woord;
+        return this.woord;
     }
 
     public char getLetter(int pos) {
         if(pos < 0 || pos >= WOORD_LENGTE) {
             throw new WoordleException("Opgegeven positie valt buiten het bereik van het woord");
         }
-        return woord.charAt(pos);
+        return this.woord.charAt(pos);
     }
 
     @Override
@@ -30,12 +39,12 @@ public class Woord implements Comparable<Woord>{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Woord other = (Woord) o;
-        return woord.equals(other.woord);
+        return this.woord.equals(other.woord);
     }
 
     @Override
     public int hashCode() {
-        return woord.hashCode();
+        return this.woord.hashCode();
     }
 
     @Override
@@ -45,6 +54,6 @@ public class Woord implements Comparable<Woord>{
 
     @Override
     public String toString() {
-        return woord;
+        return this.woord;
     }
 }
