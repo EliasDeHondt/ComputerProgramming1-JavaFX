@@ -24,19 +24,16 @@ public class WoordlePresenter {
     }
 
     private void handleEvents() {
-        view.getBtnBevestig().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                try {
-                    updateView(model.evalueer(view.getTxtInput().getText()));
-                } catch (WoordleException e) {
-                    Alert alert = new Alert(Alert.AlertType.ERROR);
-                    alert.setHeaderText(e.getMessage());
-                    alert.setTitle("Woordle Exception");
-                    alert.showAndWait();
-                    view.getTxtInput().clear();
-                    view.getTxtInput().requestFocus();
-                }
+        view.getBtnBevestig().setOnAction(actionEvent -> {
+            try {
+                updateView(model.evalueer(view.getTxtInput().getText()));
+            } catch (WoordleException e) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText(e.getMessage());
+                alert.setTitle("Woordle Exception");
+                alert.showAndWait();
+                view.getTxtInput().clear();
+                view.getTxtInput().requestFocus();
             }
         });
     }

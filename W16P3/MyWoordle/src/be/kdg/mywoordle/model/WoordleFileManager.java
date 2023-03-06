@@ -16,8 +16,7 @@ public class WoordleFileManager {
 
     private void readWoordleListFromFile() {
         woordleList = new ArrayList<>();
-        try {
-            BufferedReader br = new BufferedReader(new FileReader("W16P3/MyWoordle/data/woordenlijst.txt"));
+        try (BufferedReader br = new BufferedReader(new FileReader("W16P3/MyWoordle/data/woordenlijst.txt"))) { // br.close();
             String regel = br.readLine();
             while (regel != null) {
 
@@ -28,7 +27,6 @@ public class WoordleFileManager {
                 }
                 regel = br.readLine();
             }
-            br.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -43,10 +41,8 @@ public class WoordleFileManager {
     }
 
     public void saveResultToFile(Woord woord, int beurten) {
-        try {
-            PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("W16P3/MyWoordle/data/woordleResults.log", true)));
+        try (PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter("W16P3/MyWoordle/data/woordleResults.log", true)))) { // pw.close();
             pw.format("Op %s werd het woorf %s gevonden in %d beurten%n", LocalDate.now(), woord, beurten);
-            pw.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
