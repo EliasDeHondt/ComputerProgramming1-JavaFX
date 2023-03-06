@@ -61,7 +61,7 @@ public class MainPresenter {
         this.view.getMiSave().setOnAction(actionEvent -> {
             FileChooser fileChooser = new FileChooser();
             fileChooser.setInitialDirectory(new File("W15P3/Mypaintje/resources"));
-            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Binary Files", "*.bin") );
+            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Binary Files", "*.bin"));
             File file = fileChooser.showSaveDialog(null);
             this.model.save(file.getAbsolutePath());
         });
@@ -69,7 +69,7 @@ public class MainPresenter {
         this.view.getMiLoad().setOnAction(actionEvent -> {
             FileChooser fileChooser = new FileChooser();
             fileChooser.setInitialDirectory(new File("W15P3/Mypaintje/resources"));
-            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Binary Files", "*.bin") );
+            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Binary Files", "*.bin"));
             File file = fileChooser.showOpenDialog(null);
             this.model.load(file.getAbsolutePath());
             this.updateView();
