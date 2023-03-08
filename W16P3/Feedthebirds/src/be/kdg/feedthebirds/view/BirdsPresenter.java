@@ -23,7 +23,7 @@ public class BirdsPresenter {
     public BirdsPresenter(BirdsView view) {
         this.view = view;
         addEventHandlers();
-        birdSound = new Media(new File("res/birdSound.m4a").toURI().toString());
+        birdSound = new Media(new File("W16P3/Feedthebirds/res/birdSound.m4a").toURI().toString());
     }
 
     private void addEventHandlers() {
