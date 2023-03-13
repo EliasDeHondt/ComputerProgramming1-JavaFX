@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Additional/Additional.iml" filepath="$PROJECT_DIR$/Additional/Additional.iml" />
+      <module fileurl="file://$PROJECT_DIR$/W17P3/Animatie/Animatie.iml" filepath="$PROJECT_DIR$/W17P3/Animatie/Animatie.iml" />
       <module fileurl="file://$PROJECT_DIR$/W13P3/Background/Background.iml" filepath="$PROJECT_DIR$/W13P3/Background/Background.iml" />
       <module fileurl="file://$PROJECT_DIR$/W16P3/Berghutten/Berghutten.iml" filepath="$PROJECT_DIR$/W16P3/Berghutten/Berghutten.iml" />
       <module fileurl="file://$PROJECT_DIR$/W13P3/Dobbelen/Dobbelen.iml" filepath="$PROJECT_DIR$/W13P3/Dobbelen/Dobbelen.iml" />
@@ -26,6 +27,7 @@
       <module fileurl="file://$PROJECT_DIR$/Additional/Space Invaders/Space Invaders.iml" filepath="$PROJECT_DIR$/Additional/Space Invaders/Space Invaders.iml" />
       <module fileurl="file://$PROJECT_DIR$/W17P3/Ssp/Ssp.iml" filepath="$PROJECT_DIR$/W17P3/Ssp/Ssp.iml" />
       <module fileurl="file://$PROJECT_DIR$/W14P3/Stadhuis/Stadhuis.iml" filepath="$PROJECT_DIR$/W14P3/Stadhuis/Stadhuis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/W17P3/Stopwatch/Stopwatch.iml" filepath="$PROJECT_DIR$/W17P3/Stopwatch/Stopwatch.iml" />
       <module fileurl="file://$PROJECT_DIR$/W13P3/TTS/TTS.iml" filepath="$PROJECT_DIR$/W13P3/TTS/TTS.iml" />
       <module fileurl="file://$PROJECT_DIR$/W14P3/Tegels/Tegels.iml" filepath="$PROJECT_DIR$/W14P3/Tegels/Tegels.iml" />
       <module fileurl="file://$PROJECT_DIR$/W14P3/Tijd/Tijd.iml" filepath="$PROJECT_DIR$/W14P3/Tijd/Tijd.iml" />
