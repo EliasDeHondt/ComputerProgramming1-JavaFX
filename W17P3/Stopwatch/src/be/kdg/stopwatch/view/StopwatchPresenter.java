@@ -4,14 +4,11 @@ import be.kdg.stopwatch.model.StopwatchModel;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.util.Duration;
 
 public class StopwatchPresenter {
     private final StopwatchModel model;
     private final StopwatchView view;
-
     private Timeline stopwatchTimeline;
 
     public StopwatchPresenter(StopwatchModel model, StopwatchView view) {

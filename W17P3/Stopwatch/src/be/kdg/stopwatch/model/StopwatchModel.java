@@ -6,7 +6,6 @@ public class StopwatchModel {
     private int minutes;
     private int seconds;
     private int tickDurationMillis;
-
     public StopwatchModel() {
         this.tickDurationMillis = START_TICK_DURATION_MILLIS;
     }
