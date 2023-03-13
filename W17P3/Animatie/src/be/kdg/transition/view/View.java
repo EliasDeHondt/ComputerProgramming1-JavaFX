@@ -50,7 +50,58 @@ public class View extends Group {
     }
 
     private void animate() {
+//        TranslateTransition transition1 = new TranslateTransition();
+//        transition1.setNode(this.movingRectangle);
+//        transition1.setByX(300);
+//        transition1.setDuration(Duration.seconds(1));
+//        transition1.setCycleCount(Animation.INDEFINITE);
+//        transition1.setInterpolator(Interpolator.EASE_BOTH);
+//        transition1.play();
+//
+//        RotateTransition transition2 = new RotateTransition();
+//        transition2.setNode(this.movingRectangle);
+//        transition2.setDuration(Duration.millis(300));
+//        transition2.setByAngle(90);
+//        transition2.setCycleCount(Animation.INDEFINITE);
+//        transition2.play();
+//
+//        SequentialTransition sequentialTransition = new SequentialTransition();
+//        sequentialTransition.setCycleCount(Animation.INDEFINITE);
+//        sequentialTransition.getChildren().addAll(transition2,transition1);
+//        sequentialTransition.play();
 
+        TranslateTransition[] transitions1 = new TranslateTransition[4];
+
+        for (int i = 0; i < 4; i++) {
+            transitions1[i] = new TranslateTransition();
+            transitions1[i].setNode(this.movingRectangle);
+            transitions1[i].setDuration(Duration.seconds(1));
+            transitions1[i].setCycleCount(1);
+            transitions1[i].setInterpolator(Interpolator.EASE_BOTH);
+        }
+        transitions1[0].setByX(300);
+        transitions1[1].setByY(300);
+        transitions1[2].setByX(-300);
+        transitions1[3].setByY(-300);
+
+    RotateTransition[] transitions2 = new RotateTransition[4];
+
+        for (int i = 0; i < 4; i++) {
+            transitions2[i] = new RotateTransition();
+            transitions2[i].setNode(this.movingRectangle);
+            transitions2[i].setDuration(Duration.millis(300));
+            transitions2[i].setByAngle(90);
+            transitions2[i].setCycleCount(1);
+        }
+        SequentialTransition sequentialTransition = new SequentialTransition();
+        sequentialTransition.setCycleCount(Animation.INDEFINITE);
+
+        for (int i = 0; i < 4; i++) {
+            sequentialTransition.getChildren().addAll(transitions1[i], transitions2[i]);
+
+        }
+
+        sequentialTransition.play();
     }
 }
 

@@ -48,38 +48,22 @@ public class StopwatchPresenter {
     private void updateClockSpeed() {
         stopwatchTimeline.getKeyFrames().clear();
         stopwatchTimeline.getKeyFrames().add(new KeyFrame(
-                Duration.millis(this.model.getTickDurationMillis()), new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                model.tick();
-                updateView();
-            }
-        }));
+                Duration.millis(this.model.getTickDurationMillis()), event -> {
+                    model.tick();
+                    updateView();
+                }));
     }
 
     private void addEventhandlers() {
-        this.view.getBtnStart().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                stopwatchTimeline.play();
-            }
-        });
+        this.view.getBtnStart().setOnAction(event -> stopwatchTimeline.play());
 
-        this.view.getBtnPause().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                stopwatchTimeline.pause();
-            }
-        });
+        this.view.getBtnPause().setOnAction(event -> stopwatchTimeline.pause());
 
-        this.view.getBtnStop().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                stopwatchTimeline.stop();
-                model.reset(); // daar wordt de tickDuration aangepast
-                updateView();
-                updateClockSpeed();
-            }
+        this.view.getBtnStop().setOnAction(event -> {
+            stopwatchTimeline.stop();
+            model.reset(); // daar wordt de tickDuration aangepast
+            updateView();
+            updateClockSpeed();
         });
     }
 
