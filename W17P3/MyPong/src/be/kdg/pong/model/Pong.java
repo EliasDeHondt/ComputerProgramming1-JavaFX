@@ -15,8 +15,17 @@ public class Pong {
     public void update() {
         this.ball.move();
         if (this.ball.getY() >= this.paddle.getY() - (this.ball.getR() * 2)) {
-            if (this.ball.getX() >= this.paddle.getX() && this.ball.getX() <= this.paddle.getX() + this.paddle.getH()) {
+
+            if (this.ball.getX() > this.paddle.getX() - (this.ball.getR() * 2) && this.ball.getX() < this.paddle.getX() + this.paddle.getH()) {
+
                 this.ball.setStepY(-this.ball.getStepY());
+                this.score++;
+
+                if (this.score % 3 == 0) {
+
+                    this.ball.setStepX(this.ball.getStepX() * 1.2);
+                    this.ball.setStepY(this.ball.getStepY() + 1.2);
+                }
             }
         }
         else if (this.ball.getY() > Pong.FIELD_HEIGHT) {

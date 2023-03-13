@@ -9,8 +9,8 @@ public class Paddle {
     private int h = DEFAULT_HEIGHT;
 
     public Paddle() {
-        x = (Pong.FIELD_WIDTH/ 2) - (this.w/ 2);
-        y = (Pong.FIELD_HEIGHT / 2 ) - this.h;
+        x = (Pong.FIELD_WIDTH + 2) - (this.w / 2);
+        y = (Pong.FIELD_HEIGHT - h );
     }
 
     public void setX(int x) {

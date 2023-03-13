@@ -23,22 +23,6 @@ public class StopwatchPresenter {
         updateView();
     }
 
-/*
-    //Basis-opstelling: constante snelheid
-    private void setupTimelineBasis() {
-        stopwatchTimeline = new Timeline(new KeyFrame(
-                Duration.millis(this.model.getTickDurationMillis()), new EventHandler<ActionEvent>() {
-                    @Override
-                    public void handle(ActionEvent event) {
-                        model.tick();
-                        updateView();
-                    }
-                }));
-        stopwatchTimeline.setCycleCount(Animation.INDEFINITE);
-    }
- */
-
-
     private void setupTimeline() {
         stopwatchTimeline = new Timeline();
         stopwatchTimeline.setCycleCount(Animation.INDEFINITE);

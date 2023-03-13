@@ -5,8 +5,8 @@ public class Ball {
     private int x;
     private int y;
     private final int r = DEFAULT_RADIUS;
-    private int stepX = 2;
-    private int stepY = 2;
+    private double stepX = 2;
+    private double stepY = 3;
 
     public Ball() {
         x = Pong.FIELD_HEIGHT/ 2;
@@ -38,16 +38,16 @@ public class Ball {
     public int getR() { // Get..
         return this.r;
     }
-    public int getStepX() { // Get..
+    public double getStepX() { // Get..
         return this.stepX;
     }
-    public void setStepX(int stepX) { // Set..
+    public void setStepX(double stepX) { // Set..
         this.stepX = stepX;
     }
-    public int getStepY() { // Get..
+    public double getStepY() { // Get..
         return this.stepY;
     }
-    public void setStepY(int stepY) { // Set..
+    public void setStepY(double stepY) { // Set..
         this.stepY = stepY;
     }
 }

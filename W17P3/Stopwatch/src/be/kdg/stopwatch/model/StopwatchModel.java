@@ -39,9 +39,6 @@ public class StopwatchModel {
         this.hours = 0;
         this.minutes = 0;
         this.seconds = 0;
-        if(this.tickDurationMillis > 100) {
-            this.tickDurationMillis -= 100; //versnelling
-        }
     }
 
     public int getTickDurationMillis() {
