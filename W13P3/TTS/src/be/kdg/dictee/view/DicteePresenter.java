@@ -5,7 +5,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
 /**
- * Van Elias De Hondt
+ * @author Van Elias De Hondt
  * 6/02/2023
  */
 public class DicteePresenter {

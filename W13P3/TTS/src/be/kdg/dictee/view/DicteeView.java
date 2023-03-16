@@ -7,7 +7,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.layout.BorderPane;
 
 /**
- * Van Elias De Hondt
+ * @author Van Elias De Hondt
  * 6/02/2023
  */
 public class DicteeView extends BorderPane {

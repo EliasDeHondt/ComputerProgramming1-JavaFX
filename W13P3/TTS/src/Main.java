@@ -6,7 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * Van Elias De Hondt
+ * @author Van Elias De Hondt
  * 6/02/2023
  */
 public class Main extends Application {

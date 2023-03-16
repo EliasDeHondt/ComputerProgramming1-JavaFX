@@ -6,7 +6,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
 /**
- * Van Elias De Hondt
+ * @author Van Elias De Hondt
  * 16/11/2022
  */
 public class Model extends JPanel implements ActionListener {

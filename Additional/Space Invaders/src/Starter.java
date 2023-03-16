@@ -1,7 +1,7 @@
 import javax.swing.JFrame;
 
 /**
- * Van Elias De Hondt
+ * @author Van Elias De Hondt
  * 5/11/2022
  */
 

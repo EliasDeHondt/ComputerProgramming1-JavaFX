@@ -4,7 +4,7 @@ import com.sun.speech.freetts.Voice;
 import com.sun.speech.freetts.VoiceManager;
 
 /**
- * Van Elias De Hondt
+ * @author Van Elias De Hondt
  * 6/02/2023
  */
 
