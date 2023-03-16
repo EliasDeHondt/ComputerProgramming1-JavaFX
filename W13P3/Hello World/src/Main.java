@@ -7,7 +7,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 /**
- * @author Van Elias De Hondt
+ * @author Elias De Hondt
  * 5/02/2023
  */
 

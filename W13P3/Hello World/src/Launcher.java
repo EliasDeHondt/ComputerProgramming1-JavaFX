@@ -1,5 +1,5 @@
 /**
- * @author Van Elias De Hondt
+ * @author Elias De Hondt
  * 5/02/2023
  */
 public class Launcher {

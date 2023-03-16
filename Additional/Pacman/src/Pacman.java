@@ -1,7 +1,7 @@
 import javax.swing.JFrame;
 
 /**
- * @author Van Elias De Hondt
+ * @author Elias De Hondt
  * 16/11/2022
  */
 public class Pacman extends JFrame{

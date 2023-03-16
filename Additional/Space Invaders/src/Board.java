@@ -20,7 +20,7 @@ import java.awt.image.*;
 import java.io.*;
 
 /**
- * @author Van Elias De Hondt
+ * @author Elias De Hondt
  * 5/11/2022
  */
 
