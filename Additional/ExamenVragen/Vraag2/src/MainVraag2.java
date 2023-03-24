@@ -1,5 +1,4 @@
 import javafx.application.Application;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
@@ -9,14 +8,8 @@ import javafx.stage.Stage;
 
 public class MainVraag2 extends Application {
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        Vraag2 view = new Vraag2();
-        Scene scene = new Scene(view);
-        primaryStage.setTitle("Graphics");
-        primaryStage.setScene(scene);
-        primaryStage.setHeight(300);
-        primaryStage.setWidth(300);
-        primaryStage.show(); // Antwoord
+    public void start(Stage primaryStage) {
+        //
     }
 
     public static void main(String[] args) {

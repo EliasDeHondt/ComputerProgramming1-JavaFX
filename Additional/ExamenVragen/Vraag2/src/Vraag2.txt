@@ -1,0 +1,41 @@
+Wat is de default lay­out van een BorderPane? Teken dit uit met de
+correcte benamingen​. Hoe plaats je de nodes in de respectievelijke zone's?
+Met welke lay­out pane kan je het best complexe lay­outs maken?
+Met welke lay­out zou je een rij van Button's van gelijke grootte maken die
+onder elkaar geplaatst zijn?
+
+
+
+
+De default lay-out van een BorderPane is als volgt:
+     __________________________
+    |           top            |
+    |__________________________|
+    | left |   center   | right|
+    |______|____________|______|
+    |         bottom           |
+    |__________________________|
+
+Om nodes in de respectievelijke zones te plaatsen, kunt u de volgende methoden gebruiken:
+setTop(Node node) - om een knoop toe te voegen aan de bovenste zone
+setCenter(Node node) - om een knoop toe te voegen aan de centrale zone
+setLeft(Node node) - om een knoop toe te voegen aan de linker zone
+setRight(Node node) - om een knoop toe te voegen aan de rechter zone
+setBottom(Node node) - om een knoop toe te voegen aan de onderste zone
+
+Voor het maken van complexe lay-outs is de GridPane het beste geschikt. Hiermee kunt u knooppunten plaatsen in een raster van rijen en kolommen,
+en kunt u de grootte van elke rij en kolom aanpassen om de gewenste lay-out te bereiken.
+
+Om een rij van Button's van gelijke grootte onder elkaar te plaatsen, kunt u het beste een VBox gebruiken. Met behulp van
+de setSpacing() methode kunt u de afstand tussen de knooppunten instellen
+en met behulp van de setAlignment() methode kunt u de uitlijning van de knooppunten bepalen. Bijvoorbeeld:
+
+VBox vbox = new VBox();
+Button button1 = new Button("Button 1");
+Button button2 = new Button("Button 2");
+Button button3 = new Button("Button 3");
+vbox.getChildren().addAll(button1, button2, button3);
+vbox.setSpacing(10);
+vbox.setAlignment(Pos.CENTER);
+
+Dit zal een verticale lay-out van drie knooppunten produceren, waarbij elke knoop dezelfde grootte heeft en wordt uitgelijnd in het midden van de container.

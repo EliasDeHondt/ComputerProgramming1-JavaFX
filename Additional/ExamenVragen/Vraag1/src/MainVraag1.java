@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 public class MainVraag1 extends Application {
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         Vraag1 view = new Vraag1();
         Scene scene = new Scene(view);
         primaryStage.setTitle("Graphics");
