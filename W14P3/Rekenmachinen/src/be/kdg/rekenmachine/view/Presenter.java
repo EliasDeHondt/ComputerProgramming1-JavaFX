@@ -6,8 +6,8 @@ import be.kdg.rekenmachine.model.Operator;
 import javafx.scene.control.Alert;
 
 public class Presenter {
-    private Calculator model;
-    private CalculatorPane view;
+    private final Calculator model;
+    private final CalculatorPane view;
     public Presenter(Calculator model, CalculatorPane view) {
         this.model = model;
         this.view = view;

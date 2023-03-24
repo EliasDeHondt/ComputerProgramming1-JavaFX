@@ -53,6 +53,7 @@ public class CalculatorPane extends GridPane {
         this.textField.setAlignment(Pos.CENTER_LEFT);
     }
     public void layoutNodes() {
+        this.setStyle("-fx-background-color: #4F94EF");
         // 3.2.1 Plaats elke control op de juiste plaats in de grid. Sommige componenten nemen meer dan één rij of kolom in beslag!
         // rij 0
         // column 0, row 0, column span 5, row span 1
