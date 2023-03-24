@@ -1,0 +1,3 @@
+Vul aan wat er in het onderstaande programma ontbreekt
+om de volgende uitvoer te bekomen. Zet de in de view
+gewenste breedte en hoogte op 300 en 100.
