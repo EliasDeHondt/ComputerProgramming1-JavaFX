@@ -1,0 +1,8 @@
+In het volgende programmaatje worden een int en een String op twee
+verschillende manieren naar een bestand weggeschreven.
+1. Verklaar de code waarin onder meer try­with­resources gebruikt wordt.
+2. Geef voor de bestanden charfile​.​txt​en bytefile​.​bin​de juiste lengte
+in bytes op.
+3. Wat gebeurt er als je Paths.get("resources","charfile.txt");​in de
+plaats gebruikt?
+4. Wat kan je opmerken in verband met het catch gedeelte?

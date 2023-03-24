@@ -1,0 +1,3 @@
+Teken op de achterzijde de figuur die door het volgende programma zal
+getekend worden als je de ontbrekende programmaregel invult. Denk eraan dat
+het om een BorderPane gaat.
