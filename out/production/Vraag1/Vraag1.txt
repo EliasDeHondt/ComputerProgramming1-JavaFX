@@ -1,0 +1,6 @@
+Vul aan wat er in het onderstaande programma ontbreekt om
+de volgende uitvoer te bekomen (let ook op de Main class):
+
+primaryStage.show(); // Antwoord
+
+getChildren().addAll(circle, rectangle); // Antwoord
