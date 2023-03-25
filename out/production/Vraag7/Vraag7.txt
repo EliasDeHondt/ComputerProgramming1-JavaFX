@@ -1,0 +1,7 @@
+Pas het volgende toe in de handle methode van de EventHandler:
+De bedoeling is de actuele view door een GameViewte vervangen.
+∙ Maak een nieuwe GameView
+∙ Maak een nieuwe GamePresenter(parameters model en de gameview)
+∙ Maak GameViewde nieuwe rootvan de Scene.
+∙ Herschaal de scene naar de GameViewvia de sizeToScenemethode
+∙ Kan je de Stageook opnieuw op het scherm centreren?

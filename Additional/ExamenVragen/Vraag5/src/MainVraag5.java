@@ -15,7 +15,7 @@ public class MainVraag5 extends Application {
     @Override
     public void start(Stage primaryStage) {
         MyView view = new MyView();
-        primaryStage.setTitle("Buttons");
+        primaryStage.setTitle("Vraag 5");
         primaryStage.setScene(new Scene(view));
         primaryStage.show();
     }

@@ -1,8 +1,24 @@
 In het volgende programmaatje worden een int en een String op twee
 verschillende manieren naar een bestand weggeschreven.
-1. Verklaar de code waarin onder meer try­with­resources gebruikt wordt.
-2. Geef voor de bestanden charfile​.​txt​en bytefile​.​bin​de juiste lengte
+1. Verklaar de code waarin onder meer try with resources gebruikt wordt.
+2. Geef voor de bestanden charfile.txt en bytefile . bin de juiste lengte
 in bytes op.
-3. Wat gebeurt er als je Paths.get("resources","charfile.txt");​in de
+3. Wat gebeurt er als je Paths.get("resources","charfile.txt"); in de
 plaats gebruikt?
 4. Wat kan je opmerken in verband met het catch gedeelte?
+
+1. Het programma maakt gebruik van de try-with-resources constructie om ervoor te zorgen dat de bestanden op de juiste manier worden afgesloten nadat ze zijn gebruikt.
+De try-with-resources constructie zorgt ervoor dat de resources automatisch worden afgesloten, zelfs als er een uitzondering optreedt.e acties er moeten worden ondernomen
+in het geval van een IOException.
+
+2. Het bestand charfile.txt zal in bytes de lengte hebben van het aantal karakters in de string "5Lente" plus eventueel de lengte van het gebruikte einde van regel karakter.
+In dit geval is het einde van regel karakter afhankelijk van het besturingssysteem.
+Het bestand bytefile.bin zal in bytes de lengte hebben van 4 + de lengte van de string "Lente". Het getal 4 is de grootte van een int in Java.
+
+3. Als je Paths.get("resources","charfile.txt"); gebruikt, zal het programma proberen om het bestand "charfile.txt" te vinden in de submap "resources" van de huidige werkmap.
+Als deze submap niet bestaat of het bestand niet kan worden gevonden, zal er een FileNotFoundException worden gegenereerd.
+
+4. Het catch-gedeelte van de code vangt een IOException op die kan optreden bij het schrijven naar de bestanden. Als er een IOException optreedt, wordt de stacktrace afgedrukt
+om te helpen bij het oplossen van eventuele fouten. Het is belangrijk om op te merken dat deze
+code geen specifieke actie onderneemt om de fout te herstellen of te voorkomen dat deze opnieuw optreedt.
+Het is aan de programmeur om te beslissen welke acties er moeten worden ondernomen in het geval van een IOException.

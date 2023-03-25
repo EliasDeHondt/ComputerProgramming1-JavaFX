@@ -15,7 +15,7 @@ public class MainVraag4 extends Application {
         MyView view = new MyView();
         new Presenter(view);
 
-        primaryStage.setTitle("Button");
+        primaryStage.setTitle("Vraag 4");
         primaryStage.setScene(new Scene(view, 300, 100));
         primaryStage.show();
     }
