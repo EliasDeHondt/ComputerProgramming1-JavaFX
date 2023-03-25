@@ -1,5 +1,6 @@
 package be.kdg.hypnose.view;
 
+import javafx.animation.Animation;
 import javafx.animation.Interpolator;
 import javafx.animation.RotateTransition;
 import javafx.animation.Timeline;
@@ -28,6 +29,25 @@ public class HypnoseView extends BorderPane {
     }
 
     private void animate() {
-        // Hier aanvullen...
+        // 3.1 Maak een nieuwe lokale variabele aan van het type RotateTransition.
+        RotateTransition rotateTransition = new RotateTransition();
+
+        // 3.2 De transitie moet werken met de Node genaamd disc. (methode setNode of via constructor).
+        rotateTransition.setNode(this.disc);
+
+        // 3.3 Zorg voor een draaihoek van 360°.
+        rotateTransition.setByAngle(360);
+
+        // 3.4 Zorg er voor dat een cyclus anderhalve second duurt.
+        rotateTransition.setDuration(Duration.seconds(1.5));
+
+        // 3.5 Zorg er voor dat er oneindig aantal cycli plaatsvinden.
+        rotateTransition.setCycleCount(Animation.INDEFINITE);
+
+        // 3.6 Zorg voor een lineaire interpolatie. (methode setInterpolator).
+        rotateTransition.setInterpolator(Interpolator.LINEAR);
+
+        // 3.7 play
+        rotateTransition.play();
     }
 }
