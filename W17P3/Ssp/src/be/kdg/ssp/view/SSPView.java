@@ -38,10 +38,10 @@ public class SSPView extends VBox {
     }
 
     Label getTextField() {
-        return textField;
+        return this.textField;
     }
 
     Button getPlayButton() {
-        return playButton;
+        return this.playButton;
     }
 }

@@ -13,7 +13,6 @@ public class SSPPresenter {
         this.model = model;
         this.view = view;
         this.addEventHandlers();
-        //this.updateView();
     }
 
     private void addEventHandlers() {
@@ -28,7 +27,4 @@ public class SSPPresenter {
             }
         });
     }
-
-    /*private void updateView() {
-    }*/
 }
