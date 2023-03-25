@@ -15,7 +15,11 @@ public class MainMenuView extends VBox {
         this.initialiseNodes();
         this.layoutNodes();
 
-        // Hier aanvullen...
+        // 3.1 Voeg de stylesheet “style.css” toe aan deze VBox. (getStyleSheets().add( … )). Deze stylesheet kan je vinden in package be.kdg.mainmenu.view.css.
+        this.getStylesheets().add("/be/kdg/mainmenu/view/css/style.css");
+
+        // 3.2 Zet de achtergrondkleur van deze VBox op lichtblauw. (methode setStyle)
+        this.setStyle("-fx-background-color: #3b83bd");
     }
 
     private void initialiseNodes() {
