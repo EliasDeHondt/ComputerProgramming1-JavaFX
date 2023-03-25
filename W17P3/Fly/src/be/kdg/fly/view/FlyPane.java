@@ -24,6 +24,6 @@ public class FlyPane extends VBox {
     }
 
     Canvas getCanvas() {
-        return canvas;
+        return this.canvas;
     }
 }
