@@ -14,6 +14,7 @@
       <module fileurl="file://$PROJECT_DIR$/W13P3/Hello World/Hello World.iml" filepath="$PROJECT_DIR$/W13P3/Hello World/Hello World.iml" />
       <module fileurl="file://$PROJECT_DIR$/W17P3/Hypnose/Hypnose.iml" filepath="$PROJECT_DIR$/W17P3/Hypnose/Hypnose.iml" />
       <module fileurl="file://$PROJECT_DIR$/JavaFX.iml" filepath="$PROJECT_DIR$/JavaFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Additional/LogicGates/LogicGates.iml" filepath="$PROJECT_DIR$/Additional/LogicGates/LogicGates.iml" />
       <module fileurl="file://$PROJECT_DIR$/W18P3/Mainmenu/Mainmenu.iml" filepath="$PROJECT_DIR$/W18P3/Mainmenu/Mainmenu.iml" />
       <module fileurl="file://$PROJECT_DIR$/W17P3/MyPong/MyPong.iml" filepath="$PROJECT_DIR$/W17P3/MyPong/MyPong.iml" />
       <module fileurl="file://$PROJECT_DIR$/W16P3/MyWoordle/MyWoordle.iml" filepath="$PROJECT_DIR$/W16P3/MyWoordle/MyWoordle.iml" />
@@ -39,6 +40,8 @@
       <module fileurl="file://$PROJECT_DIR$/W16P3/Voetbal/Voetbal.iml" filepath="$PROJECT_DIR$/W16P3/Voetbal/Voetbal.iml" />
       <module fileurl="file://$PROJECT_DIR$/Additional/ExamenVragen/Vraag1/Vraag1.iml" filepath="$PROJECT_DIR$/Additional/ExamenVragen/Vraag1/Vraag1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Additional/ExamenVragen/Vraag10/Vraag10.iml" filepath="$PROJECT_DIR$/Additional/ExamenVragen/Vraag10/Vraag10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Additional/ExamenVragen/Vraag11/Vraag11.iml" filepath="$PROJECT_DIR$/Additional/ExamenVragen/Vraag11/Vraag11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Additional/ExamenVragen/Vraag12/Vraag12.iml" filepath="$PROJECT_DIR$/Additional/ExamenVragen/Vraag12/Vraag12.iml" />
       <module fileurl="file://$PROJECT_DIR$/Additional/ExamenVragen/Vraag2/Vraag2.iml" filepath="$PROJECT_DIR$/Additional/ExamenVragen/Vraag2/Vraag2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Additional/ExamenVragen/Vraag3/Vraag3.iml" filepath="$PROJECT_DIR$/Additional/ExamenVragen/Vraag3/Vraag3.iml" />
       <module fileurl="file://$PROJECT_DIR$/Additional/ExamenVragen/Vraag4/Vraag4.iml" filepath="$PROJECT_DIR$/Additional/ExamenVragen/Vraag4/Vraag4.iml" />

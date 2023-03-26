@@ -1,0 +1,44 @@
+Wat is MVP? Maak een tekening met volledige verklaring van het doel en de werking.
+
+              +------------------(1)
+              |        View       |
+              +-------------------+
+                        ^
+                        |
+              +------------------(2)
+              |      Presenter    |
+              +-------------------+
+                        ^
+                        |
+             +-------------------(3)
+             |        Model       |
+             +--------------------+
+
+1. De View-klasse is verantwoordelijk voor het weergeven van de gegevens op het scherm en het afhandelen van de gebruikersinteracties.
+2. De Presenter fungeert als de tussenpersoon tussen de View en het Model. Het ontvangt invoer van de gebruiker en coördineert de communicatie tussen de View en het Model.
+3. Het Model bevat de logica en gegevens van de applicatie, zoals gegevensbronnen, berekeningen en verwerking.
+
+
+Geef een voorbeeld van een mappenstructuur waar ook "images" en "css" in voorkomen.
+
+project
+│   README.md
+│   pom.xml
+│
+└──────src
+        ├───Model
+        │     ├───A
+        │     ├───B
+        │     └───C
+        ├───view
+        │     ├───view-A
+        │     │     ├───view
+        │     │     └───presenter
+        │     └───view-B
+        │           ├───view
+        │           └───presenter
+        └───resources
+              ├───css
+              │   └───style.css
+              └───images
+                    └───img-A.png

@@ -1,0 +1,4 @@
+Vul aan wat er nodig is om de situatie van hiernaast
+te bekomen. Het tekstveld van de ComboBoxmoet je
+kunnen invullen en standaard moet de eerste keuze
+geselecteerd zijn. Zie ook de commentaar in de Main.

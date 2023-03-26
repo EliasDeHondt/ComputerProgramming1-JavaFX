@@ -1,0 +1,66 @@
+/**
+ * @author Elias De Hondt
+ * @since 26/03/2023
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+#button {
+    -fx-font-family: 'VT323', monospace;
+    -fx-background-color: #FFFFFF;
+    -fx-font-size: 28;
+    -fx-color: #FFFFFF;
+    -fx-padding: 15 110 15 110;
+    -fx-text-alignment: center;
+}
+
+#check-box {
+    -fx-font-family: 'VT323', monospace;
+    -fx-text-fill: #000000;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 10px;
+    -fx-border-color: #000000;
+    -fx-border-radius: 5px;
+}
+
+#btnFinished {
+    -fx-font-family: 'VT323', monospace;
+    -fx-background-color: #FFFFFF;
+    -fx-font-size: 28;
+    -fx-color: #FFFFFF;
+    -fx-padding: 15;
+    -fx-text-alignment: center;
+}
+
+#label {
+    -fx-font-family: 'VT323', monospace;
+    -fx-background-color: #FFFFFF;
+    -fx-font-size: 28;
+    -fx-color: #FFFFFF;
+    -fx-padding: 15 30 15 30;
+    -fx-text-alignment: center;
+}
+
+#True {
+    -fx-font-family: 'VT323', monospace;
+    -fx-background-color: #19C37D;
+    -fx-font-size: 28;
+    -fx-color: #FFFFFF;
+    -fx-padding: 15;
+    -fx-text-alignment: center;
+}
+
+#False {
+    -fx-font-family: 'VT323', monospace;
+    -fx-background-color: #EF4146;
+    -fx-font-size: 28;
+    -fx-color: #FFFFFF;
+    -fx-padding: 15;
+    -fx-text-alignment: center;
+}
+
+#pane {
+    -fx-background-color: #4F94EF;
+    -fx-background-repeat: stretch;
+    -fx-background-position: center center;
+}
