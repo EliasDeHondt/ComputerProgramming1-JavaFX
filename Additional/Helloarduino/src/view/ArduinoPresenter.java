@@ -1,12 +1,19 @@
-package be.kdg.helloarduino.view;
+/**
+ * @author Elias De Hondt
+ * @see https://eliasdh.com
+ * @since 09/05/2023
+ */
 
-import be.kdg.helloarduino.model.SerialArduinoConnection;
+package view;
+
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import model.SerialArduinoConnection;
+import view.ArduinoView;
 
 public class ArduinoPresenter implements SerialPortDataListener {
     private SerialArduinoConnection model;

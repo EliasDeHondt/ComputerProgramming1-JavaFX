@@ -1,4 +1,10 @@
-package be.kdg.helloarduino.view;
+/**
+ * @author Elias De Hondt
+ * @see https://eliasdh.com
+ * @since 09/05/2023
+ */
+
+package view;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;

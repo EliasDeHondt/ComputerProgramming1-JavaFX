@@ -1,12 +1,17 @@
-package be.kdg.helloarduino.model;
+/**
+ * @author Elias De Hondt
+ * @see https://eliasdh.com
+ * @since 09/05/2023
+ */
+
+package model;
 
 import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
-
 import java.io.PrintWriter;
 
 public class SerialArduinoConnection {
-    public static final int ARDUINO_PORT = 2;
+    public static final int ARDUINO_PORT = 0;
 
     private SerialPort arduinoPort;
 
