@@ -50,95 +50,60 @@ public class AlienAttackView extends GridPane {
     }
 
     private void layoutNodes() {
-
-
         // Display 1
-        this.add(this.segmentOnHorizontal[0], 1, 0); // Segment A
-        //this.add(this.segmentOffHorizontal[0], 1, 0); // Segment A
-
-        this.add(this.segmentOnVertical[0], 0, 1); // Segment F
-        //this.add(this.segmentOffVertical[0], 0, 1); // Segment F
-
-        this.add(this.segmentOnVertical[1], 2, 1); // Segment B
-        //this.add(this.segmentOffVertical[1], 2, 1); // Segment B
-
-        this.add(this.segmentOnHorizontal[1], 1, 2); // Segment G
-        //this.add(this.segmentOffHorizontal[1], 1, 2); // Segment G
-
-        this.add(this.segmentOnVertical[2], 0, 3); // Segment E
-        //this.add(this.segmentOffVertical[2], 0, 3); // Segment E
-
-        this.add(this.segmentOnVertical[3], 2, 3); // Segment C
-        //this.add(this.segmentOffVertical[3], 2, 3); // Segment C
-
-        this.add(this.segmentOnHorizontal[2], 1, 4); // Segment D
-        //this.add(this.segmentOffHorizontal[2], 1, 4); // Segment D
-
+        this.add(this.segmentOffHorizontal[0], 1, 0); // Segment A
+        this.add(this.segmentOffVertical[0], 0, 1); // Segment F
+        this.add(this.segmentOffVertical[1], 2, 1); // Segment B
+        this.add(this.segmentOffHorizontal[1], 1, 2); // Segment G
+        this.add(this.segmentOffVertical[2], 0, 3); // Segment E
+        this.add(this.segmentOffVertical[3], 2, 3); // Segment C
+        this.add(this.segmentOffHorizontal[2], 1, 4); // Segment D
 
         // Display 2
-        this.add(this.segmentOnHorizontal[3], 4, 0); // Segment A
-        //this.add(this.segmentOffHorizontal[3], 4, 0); // Segment A
-
-        this.add(this.segmentOnVertical[4], 3, 1); // Segment F
-        //this.add(this.segmentOffVertical[4], 3, 1); // Segment F
-
-        this.add(this.segmentOnVertical[5], 5, 1); // Segment B
-        //this.add(this.segmentOffVertical[5], 5, 1); // Segment B
-
-        this.add(this.segmentOnHorizontal[4], 4, 2); // Segment G
-        //this.add(this.segmentOffHorizontal[4], 4, 2); // Segment G
-
-        this.add(this.segmentOnVertical[6], 3, 3); // Segment E
-        //this.add(this.segmentOffVertical[6], 3, 3); // Segment E
-
-        this.add(this.segmentOnVertical[7], 5, 3); // Segment C
-        //this.add(this.segmentOffVertical[7], 5, 3); // Segment C
-
-        this.add(this.segmentOnHorizontal[5], 4, 4); // Segment D
-        //this.add(this.segmentOffHorizontal[5], 4, 4); // Segment D
+        this.add(this.segmentOffHorizontal[3], 4, 0); // Segment A
+        this.add(this.segmentOffVertical[4], 3, 1); // Segment F
+        this.add(this.segmentOffVertical[5], 5, 1); // Segment B
+        this.add(this.segmentOffHorizontal[4], 4, 2); // Segment G
+        this.add(this.segmentOffVertical[6], 3, 3); // Segment E
+        this.add(this.segmentOffVertical[7], 5, 3); // Segment C
+        this.add(this.segmentOffHorizontal[5], 4, 4); // Segment D
 
         // Display 3
-        this.add(this.segmentOnHorizontal[6], 7, 0); // Segment A
-        //this.add(this.segmentOffHorizontal[6], 7, 0); // Segment A
-
-        this.add(this.segmentOnVertical[8], 6, 1); // Segment F
-        //this.add(this.segmentOffVertical[8], 6, 1); // Segment F
-
-        this.add(this.segmentOnVertical[9], 8, 1); // Segment B
-        //this.add(this.segmentOffVertical[9], 8, 1); // Segment B
-
-        this.add(this.segmentOnHorizontal[7], 7, 2); // Segment G
-        //this.add(this.segmentOffHorizontal[7], 7, 2); // Segment G
-
-        this.add(this.segmentOnVertical[10], 6, 3); // Segment E
-        //this.add(this.segmentOffVertical[10], 6, 3); // Segment E
-
-        this.add(this.segmentOnVertical[11], 8, 3); // Segment C
-        //this.add(this.segmentOffVertical[11], 8, 3); // Segment C
-
-        this.add(this.segmentOnHorizontal[8], 7, 4); // Segment D
-        //this.add(this.segmentOffHorizontal[8], 7, 4); // Segment D
+        this.add(this.segmentOffHorizontal[6], 7, 0); // Segment A
+        this.add(this.segmentOffVertical[8], 6, 1); // Segment F
+        this.add(this.segmentOffVertical[9], 8, 1); // Segment B
+        this.add(this.segmentOffHorizontal[7], 7, 2); // Segment G
+        this.add(this.segmentOffVertical[10], 6, 3); // Segment E
+        this.add(this.segmentOffVertical[11], 8, 3); // Segment C
+        this.add(this.segmentOffHorizontal[8], 7, 4); // Segment D
 
         // Display 4
-        this.add(this.segmentOnHorizontal[9], 10, 0); // Segment A
-        //this.add(this.segmentOffHorizontal[9], 10, 0); // Segment A
+        this.add(this.segmentOffHorizontal[9], 10, 0); // Segment A
+        this.add(this.segmentOffVertical[12], 9, 1); // Segment F
+        this.add(this.segmentOffVertical[13], 11, 1); // Segment B
+        this.add(this.segmentOffHorizontal[10], 10, 2); // Segment G
+        this.add(this.segmentOffVertical[14], 9, 3); // Segment E
+        this.add(this.segmentOffVertical[15], 11, 3); // Segment C
+        this.add(this.segmentOffHorizontal[11], 10, 4); // Segment D
+    }
 
-        this.add(this.segmentOnVertical[12], 9, 1); // Segment F
-        //this.add(this.segmentOffVertical[12], 9, 1); // Segment F
+    public ImageView[] getSegmentOnHorizontal() {
+        return this.segmentOnHorizontal;
+    }
 
-        this.add(this.segmentOnVertical[13], 11, 1); // Segment B
-        //this.add(this.segmentOffVertical[13], 11, 1); // Segment B
+    public ImageView[] getSegmentOffHorizontal() {
+        return this.segmentOffHorizontal;
+    }
 
-        this.add(this.segmentOnHorizontal[10], 10, 2); // Segment G
-        //this.add(this.segmentOffHorizontal[10], 10, 2); // Segment G
+    public ImageView[] getSegmentOnVertical() {
+        return this.segmentOnVertical;
+    }
 
-        this.add(this.segmentOnVertical[14], 9, 3); // Segment E
-        //this.add(this.segmentOffVertical[14], 9, 3); // Segment E
+    public ImageView[] getSegmentOffVertical() {
+        return this.segmentOffVertical;
+    }
 
-        this.add(this.segmentOnVertical[15], 11, 3); // Segment C
-        //this.add(this.segmentOffVertical[15], 11, 3); // Segment C
-
-        this.add(this.segmentOnHorizontal[11], 10, 4); // Segment D
-        //this.add(this.segmentOffHorizontal[11], 10, 4); // Segment D
+    public GridPane getGridPane() {
+        return this;
     }
 }
