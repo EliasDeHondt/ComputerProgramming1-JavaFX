@@ -14,51 +14,51 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import model.SerialArduinoConnection;
 
-public class AlienAttackPresenter implements SerialPortDataListener {
+public class AlienAttackPresenter  { // implements SerialPortDataListener
     private SerialArduinoConnection model;
     private AlienAttackView view;
 
     public AlienAttackPresenter(SerialArduinoConnection model, AlienAttackView view) {
         this.model = model;
         this.view = view;
-        addEventListeners();
-        model.addDatalistener(this);
+        this.addEventListeners();
+//        model.addDatalistener(this);
     }
 
     private void addEventListeners() {
-        view.getBtnSend().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                System.out.println(Thread.currentThread());
-                view.getTfTextFromArduino().setText("");
-                model.sendString(view.getTfTextForArduino().getText());
-            }
-        });
+//        view.getBtnSend().setOnAction(new EventHandler<ActionEvent>() {
+//            @Override
+//            public void handle(ActionEvent actionEvent) {
+//                System.out.println(Thread.currentThread());
+//                view.getTfTextFromArduino().setText("");
+//                model.sendString(view.getTfTextForArduino().getText());
+//            }
+//        });
     }
 
-    @Override
-    public int getListeningEvents() {
-        return SerialPort.LISTENING_EVENT_DATA_AVAILABLE;
-    }
+//    @Override
+//    public int getListeningEvents() {
+//        return SerialPort.LISTENING_EVENT_DATA_AVAILABLE;
+//    }
 
-    @Override
-    public void serialEvent(SerialPortEvent event) {
-        System.out.println(Thread.currentThread());
-        if (event.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE) {
-            return;
-        }
-        StringBuilder text = new StringBuilder(view.getTfTextFromArduino().getText());
-        for (byte oneByte : model.receiveBytes()) {
-            text.append((char) oneByte);
-        }
-        //De methode serialEvent wordt vanop een andere Thread aangeroepen (asynchroon)
-        //Omdat het aanpassen van de UI enkel mag op de JavaFX Application Thread
-        //gebruiken we Platform.runLater. Threads wordt behandeld in de leerstof java van het tweede jaar!
-        Platform.runLater(new Runnable() {
-            @Override
-            public void run() {
-                view.getTfTextFromArduino().setText(text.toString());
-            }
-        });
-    }
+//    @Override
+//    public void serialEvent(SerialPortEvent event) {
+//        System.out.println(Thread.currentThread());
+//        if (event.getEventType() != SerialPort.LISTENING_EVENT_DATA_AVAILABLE) {
+//            return;
+//        }
+//        StringBuilder text = new StringBuilder(view.getTfTextFromArduino().getText());
+//        for (byte oneByte : model.receiveBytes()) {
+//            text.append((char) oneByte);
+//        }
+//        //De methode serialEvent wordt vanop een andere Thread aangeroepen (asynchroon)
+//        //Omdat het aanpassen van de UI enkel mag op de JavaFX Application Thread
+//        //gebruiken we Platform.runLater. Threads wordt behandeld in de leerstof java van het tweede jaar!
+//        Platform.runLater(new Runnable() {
+//            @Override
+//            public void run() {
+//                view.getTfTextFromArduino().setText(text.toString());
+//            }
+//        });
+//    }
 }
