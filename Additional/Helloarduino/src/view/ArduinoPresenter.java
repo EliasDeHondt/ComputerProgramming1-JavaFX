@@ -27,13 +27,10 @@ public class ArduinoPresenter implements SerialPortDataListener {
     }
 
     private void addEventListeners() {
-        view.getBtnSend().setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                System.out.println(Thread.currentThread());
-                view.getTfTextFromArduino().setText("");
-                model.sendString(view.getTfTextForArduino().getText());
-            }
+        view.getBtnSend().setOnAction(actionEvent -> {
+            System.out.println(Thread.currentThread());
+            view.getTfTextFromArduino().setText("");
+            model.sendString(view.getTfTextForArduino().getText());
         });
     }
 

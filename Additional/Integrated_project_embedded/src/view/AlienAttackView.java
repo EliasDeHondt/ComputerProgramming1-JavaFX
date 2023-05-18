@@ -140,7 +140,5 @@ public class AlienAttackView extends GridPane {
 
         this.add(this.segmentOnHorizontal[11], 10, 4); // Segment D
         //this.add(this.segmentOffHorizontal[11], 10, 4); // Segment D
-
-
     }
 }

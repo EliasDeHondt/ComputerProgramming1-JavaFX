@@ -18,22 +18,22 @@ public class SerialArduinoConnection {
         for (SerialPort port : SerialPort.getCommPorts()){
             System.out.println(port.toString());//check welke bij jou de Arduino port is...
         }
-        arduinoPort = SerialPort.getCommPorts()[ARDUINO_PORT];
-        boolean result = arduinoPort.openPort();
+        this.arduinoPort = SerialPort.getCommPorts()[ARDUINO_PORT];
+        boolean result = this.arduinoPort.openPort();
         System.out.println(result?"port opened!":"port NOT opened!");
     }
 
     public void sendString(String data) {
         System.out.printf("Sending %s to Arduino...\n", data);
-        PrintWriter writer = new PrintWriter(arduinoPort.getOutputStream());
+        PrintWriter writer = new PrintWriter(this.arduinoPort.getOutputStream());
         writer.print(data);
         writer.close();
     }
 
     public byte[] receiveBytes(){
-        byte[] newData = new byte[arduinoPort.bytesAvailable()];
-        arduinoPort.readBytes(newData, newData.length);
-        System.out.print("Receiving data from Arduino:");
+        byte[] newData = new byte[this.arduinoPort.bytesAvailable()];
+        this.arduinoPort.readBytes(newData, newData.length);
+        System.out.print("Receiving data from Arduino:\n");
         for (byte newDatum : newData) {
             System.out.printf("%c",(char)newDatum);
         }
@@ -42,6 +42,6 @@ public class SerialArduinoConnection {
     }
 
     public void addDatalistener(SerialPortDataListener dataListener){
-        arduinoPort.addDataListener(dataListener);
+        this.arduinoPort.addDataListener(dataListener);
     }
 }
