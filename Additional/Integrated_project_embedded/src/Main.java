@@ -14,7 +14,7 @@ import view.AlienAttackView;
 
 public class Main extends Application {
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         SerialArduinoConnection connection = new SerialArduinoConnection();
         AlienAttackView view = new AlienAttackView();
         new AlienAttackPresenter(connection, view);

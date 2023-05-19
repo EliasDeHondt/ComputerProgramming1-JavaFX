@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 
 public class SerialArduinoConnection {
     public static final int ARDUINO_PORT = 0;
-    private SerialPort arduinoPort;
+    private final SerialPort arduinoPort;
 
     public SerialArduinoConnection() {
         for (SerialPort port : SerialPort.getCommPorts()){

@@ -26,41 +26,7 @@ public class AlienAttackPresenter implements SerialPortDataListener {
 
     public void resetSegment() {
         this.view.getGridPane().getChildren().clear();
-        // Display 1
-        this.view.getGridPane().add(this.view.getSegmentOffHorizontal()[0], 1, 0); // Segment A
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[0], 0, 1); // Segment F
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[1], 2, 1); // Segment B
-        this.view.getGridPane().add(this.view.getSegmentOffHorizontal()[1], 1, 2); // Segment G
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[2], 0, 3); // Segment E
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[3], 2, 3); // Segment C
-        this.view.getGridPane().add(this.view.getSegmentOffHorizontal()[2], 1, 4); // Segment D
-
-        // Display 2
-        this.view.getGridPane().add(this.view.getSegmentOffHorizontal()[3], 4, 0); // Segment A
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[4], 3, 1); // Segment F
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[5], 5, 1); // Segment B
-        this.view.getGridPane().add(this.view.getSegmentOffHorizontal()[4], 4, 2); // Segment G
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[6], 3, 3); // Segment E
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[7], 5, 3); // Segment C
-        this.view.getGridPane().add(this.view.getSegmentOffHorizontal()[5], 4, 4); // Segment D
-
-        // Display 3
-        this.view.getGridPane().add(this.view.getSegmentOffHorizontal()[6], 7, 0); // Segment A
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[8], 6, 1); // Segment F
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[9], 8, 1); // Segment B
-        this.view.getGridPane().add(this.view.getSegmentOffHorizontal()[7], 7, 2); // Segment G
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[10], 6, 3); // Segment E
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[11], 8, 3); // Segment C
-        this.view.getGridPane().add(this.view.getSegmentOffHorizontal()[8], 7, 4); // Segment D
-
-        // Display 4
-        this.view.getGridPane().add(this.view.getSegmentOffHorizontal()[9], 10, 0); // Segment A
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[12], 9, 1); // Segment F
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[13], 11, 1); // Segment B
-        this.view.getGridPane().add(this.view.getSegmentOffHorizontal()[10], 10, 2); // Segment G
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[14], 9, 3); // Segment E
-        this.view.getGridPane().add(this.view.getSegmentOffVertical()[15], 11, 3); // Segment C
-        this.view.getGridPane().add(this.view.getSegmentOffHorizontal()[11], 10, 4); // Segment D
+        this.view.layoutNodes();
     }
 
     // Methods
@@ -84,11 +50,7 @@ public class AlienAttackPresenter implements SerialPortDataListener {
             arduinoData.append((char) oneByte);
         }
 
-
-
         Platform.runLater(() -> {
-            System.out.println(arduinoData.toString());
-
             if (arduinoData.substring(0, "JavaData".length()).equals("JavaData")) {
                 // Haal de waarden van de attributen op
                 String numbersSubstring = arduinoData.substring("JavaData ".length());
@@ -99,25 +61,53 @@ public class AlienAttackPresenter implements SerialPortDataListener {
 
                 this.resetSegment(); // All Segment Off
 
-                if (player_Pawn == 0) {
-                    this.view.getGridPane().getChildren().remove(1, 4);
-                    this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[2], 1, 4); // Segment D
-                }
-                else if (player_Pawn == 1) {
-                    this.view.getGridPane().getChildren().remove(4, 4);
-                    this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[5], 4, 4); // Segment D
-                }
-                else if (player_Pawn == 2) {
-                    this.view.getGridPane().getChildren().remove(7, 4);
-                    this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[8], 7, 4); // Segment D
-                }
-                else if (player_Pawn == 3) {
-                    this.view.getGridPane().getChildren().remove(10, 4);
-                    this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[11], 10, 4); // Segment D
-                }
+                // Bottom line of seven segment display (Player).
+                if (player_Pawn == 0) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[2], 1, 4); // Segment D Display 1
+                else if (player_Pawn == 1) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[5], 4, 4); // Segment D Display 2
+                else if (player_Pawn == 2) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[8], 7, 4); // Segment D Display 3
+                else if (player_Pawn == 3) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[11], 10, 4); // Segment D Display 4
 
+                if (teller == 1) {
+                    if (computer_Pawn == 0) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[0], 1, 0); // Segment A Display 1
+                    else if (computer_Pawn == 1) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[3], 4, 0); // Segment A Display 2
+                    else if (computer_Pawn == 2) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[6], 7, 0); // Segment A Display 3
+                    else if (computer_Pawn == 3) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[9], 10, 0); // Segment A Display 4
+                } else if (teller == 2) {
+                    if (down == 0) {
+                        if (computer_Pawn == 0) this.view.getGridPane().add(this.view.getSegmentOnVertical()[0], 0, 1); // Segment F Display 1
+                        else if (computer_Pawn == 1) this.view.getGridPane().add(this.view.getSegmentOnVertical()[4], 3, 1); // Segment F Display 2
+                        else if (computer_Pawn == 2) this.view.getGridPane().add(this.view.getSegmentOnVertical()[8], 6, 1); // Segment F Display 3
+                        else if (computer_Pawn == 3) this.view.getGridPane().add(this.view.getSegmentOnVertical()[12], 9, 1); // Segment F Display 4
+                    } else if (down == 1) {
+                        if (computer_Pawn == 0) this.view.getGridPane().add(this.view.getSegmentOnVertical()[1], 2, 1); // Segment B Display 1
+                        else if (computer_Pawn == 1) this.view.getGridPane().add(this.view.getSegmentOnVertical()[5], 5, 1); // Segment B Display 2
+                        else if (computer_Pawn == 2) this.view.getGridPane().add(this.view.getSegmentOnVertical()[9], 8, 1); // Segment B Display 3
+                        else if (computer_Pawn == 3) this.view.getGridPane().add(this.view.getSegmentOnVertical()[13], 11, 1); // Segment B Display 4
+                    }
+                } else if (teller == 3) {
+                    if (computer_Pawn == 0) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[1], 1, 2); // Segment G Display 1
+                    else if (computer_Pawn == 1) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[4], 4, 2); // Segment G Display 2
+                    else if (computer_Pawn == 2) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[7], 7, 2); // Segment G Display 3
+                    else if (computer_Pawn == 3) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[10], 10, 2); // Segment G Display 4
+                } else if (teller == 4) {
+                    if (down == 0) {
+                        if (computer_Pawn == 0) this.view.getGridPane().add(this.view.getSegmentOnVertical()[2], 0, 3); // Segment E Display 1
+                        else if (computer_Pawn == 1) this.view.getGridPane().add(this.view.getSegmentOnVertical()[6], 3, 3); // Segment E Display 2
+                        else if (computer_Pawn == 2) this.view.getGridPane().add(this.view.getSegmentOnVertical()[10], 6, 3); // Segment E Display 3
+                        else if (computer_Pawn == 3) this.view.getGridPane().add(this.view.getSegmentOnVertical()[14], 9, 3); // Segment E Display 4
+                    } else if (down == 1) {
+                        if (computer_Pawn == 0) this.view.getGridPane().add(this.view.getSegmentOnVertical()[3], 2, 3); // Segment C Display 1
+                        else if (computer_Pawn == 1) this.view.getGridPane().add(this.view.getSegmentOnVertical()[7], 5, 3); // Segment C Display 2
+                        else if (computer_Pawn == 2) this.view.getGridPane().add(this.view.getSegmentOnVertical()[11], 8, 3); // Segment C Display 3
+                        else if (computer_Pawn == 3) this.view.getGridPane().add(this.view.getSegmentOnVertical()[15], 11, 3); // Segment C Display 4
+                    }
+                } else if (teller == 5 && !(computer_Pawn == player_Pawn)) {
+                    if (computer_Pawn == 0) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[2], 1, 4); // Segment D Display 1
+                    else if (computer_Pawn == 1) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[5], 4, 4); // Segment D Display 2
+                    else if (computer_Pawn == 2) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[8], 7, 4); // Segment D Display 3
+                    else if (computer_Pawn == 3) this.view.getGridPane().add(this.view.getSegmentOnHorizontal()[11], 10, 4); // Segment D Display 4
+                }
             }
-
         });
     }
 }
